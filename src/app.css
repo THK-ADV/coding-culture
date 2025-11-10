@@ -119,3 +119,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+:global(.prose ol > li[id^="ref-"],
+        .prose ul > li[id^="ref-"]) {
+  scroll-margin-top: 6rem;
+}
+
+:global(.prose a[href^="#ref-"]) {
+  text-decoration: none;
+  font-weight: 600;
+  color: theme('colors.blue.600');
+}
+:global(.prose a[href^="#ref-"]:hover) {
+  text-decoration: underline;
+}
