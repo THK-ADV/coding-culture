@@ -10,6 +10,9 @@
 		{ href: '/templates', label: 'Vorlagen' },
 		{ href: '/about', label: 'Info' }
 	];
+
+	export const prerender = true;
+	export const trailingSlash = 'always';
 </script>
 
 <svelte:head>
