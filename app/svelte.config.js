@@ -15,7 +15,6 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: 'index.html',
-			precompress: false
 		}),
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/coding-culture' : ''
