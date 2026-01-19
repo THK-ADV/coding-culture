@@ -2,8 +2,8 @@
 	import * as Table from '$lib/components/ui/table';
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
+	import { base } from '$app/paths';
 
-	// 2. Icon-Import
 	import { Download } from 'lucide-svelte';
 
 	const templates = [
@@ -94,7 +94,7 @@
 							</Badge>
 						</Table.Cell>
 						<Table.Cell class="text-right">
-							<a href={template.fileUrl} download>
+							<a href="{base}{template.fileUrl}" download>
 								<Button variant="outline" size="sm">
 									<Download class="h-4 w-4 mr-2" />
 									Herunterladen
