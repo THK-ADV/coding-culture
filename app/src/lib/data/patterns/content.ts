@@ -117,11 +117,11 @@ export const patterns: Pattern[] = [
 			figure: {
 				images: [
 					{
-						src: 'images/hourofcode.png',
+						src: '/images/hourofcode.png',
 						caption: 'A collection of possible "Hour of Code" coding activities'
 					},
 					{
-						src: 'images/hoc-application.png',
+						src: '/images/hoc-application.png',
 						caption: 'Exemplary Hour of Code task "Hello World: Transformers One"'
 					}
 				],
@@ -187,7 +187,7 @@ export const patterns: Pattern[] = [
 			figure: {
 				images: [
 					{
-						src: 'images/pairprogramming.png',
+						src: '/images/pairprogramming.png',
 						caption: ''
 					}
 				],
@@ -290,11 +290,11 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/3d-print.jpg',
+							src: '/images/3d-print.jpg',
 							caption: '3D-printed object'
 						},
 						{
-							src: 'images/lego.jpg',
+							src: '/images/lego.jpg',
 							caption: 'Common toy bricks'
 						}
 					],
@@ -307,7 +307,7 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/pattern-coins.jpeg',
+							src: '/images/pattern-coins.jpeg',
 							caption: ''
 						}
 					],
@@ -329,7 +329,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'abstract-guided-instruction',
 		title: 'Abstract Guided Instruction Through Storytelling',
-		teaserImg: 'images/agi.png',
+		teaserImg: '/images/agi.png',
 		context: 'Learners are engaging with programming for the first time and have no prior experience. It is essential to introduce and explain various coding concepts to establish a foundation for programming.',
 		problem: 'Learning coding concepts without any prior experience poses a significant entry barrier, as it requires a completely new way of thinking<sup>[15]</sup>. The success in programming depends on several predictors such as algorithmic thinking, logical reasoning, and mathematical skills, none of which can be assumed as given.',
 		forces: [
@@ -366,11 +366,11 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/awbie.jpg',
+							src: '/images/awbie.jpg',
 							caption: ''
 						},
 						{
-							src: 'images/awbie2.jpg',
+							src: '/images/awbie2.jpg',
 							caption: ''
 						}
 					],
@@ -384,11 +384,11 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/sandcastle1.jpg',
+							src: '/images/sandcastle1.jpg',
 							caption: ''
 						},
 						{
-							src: 'images/sandcastle2.jpg',
+							src: '/images/sandcastle2.jpg',
 							caption: ''
 						}
 					],
@@ -402,11 +402,11 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/ruby2.jpg',
+							src: '/images/ruby2.jpg',
 							caption: ''
 						},
 						{
-							src: 'images/ruby3.jpg',
+							src: '/images/ruby3.jpg',
 							caption: ''
 						}
 					],
@@ -419,7 +419,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'block-based-programming',
 		title: 'Block-Based Programming',
-		teaserImg: 'images/bbp.png',
+		teaserImg: '/images/bbp.png',
 		context: 'Learners understand the basic concepts behind programming and algorithmic thinking at a high level of abstraction. They want to expand their knowledge and learn how to write syntactically correct code in order to create a working program.',
 		problem: 'There is a considerable discrepancy between understanding algorithmic processes and the ability to code from scratch. This discrepancy can be described as a difference in the levels of abstraction. Algorithmic thinking requires the learner to think about abstract concepts at a high level because its goal is to build a repeatable process. Writing text-based code with syntax requires the learner not only to apply algorithmic thinking (a new way of thinking for them), but also to translate it into syntax with which they may not be entirely familiar. These two points in the process of learning to code leave open a gap that has not been fully organized. There are no steps between these two points that help visualize the structure of the code or resemble syntax at a level of low abstraction. Writing code can be seen as a process that provides low- to medium-interaction, using common editors and syntax. This prevents learners from experimenting with the code and feeling free to change things and explore different solutions.',
 		forces: [
@@ -456,7 +456,7 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/make_code_screenshot.png',
+							src: '/images/make_code_screenshot.png',
 							caption: ''
 						}
 					],
@@ -471,7 +471,7 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/microbit.jpg',
+							src: '/images/microbit.jpg',
 							caption: ''
 						}
 					],
@@ -485,11 +485,11 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/littlebits_screenshot.png',
+							src: '/images/littlebits_screenshot.png',
 							caption: 'LittleBits Editor'
 						},
 						{
-							src: 'images/littlebits_example.png',
+							src: '/images/littlebits_example.png',
 							caption: 'Pictures of a sample project "Tug of War" with the build project on the left side and the wiring diagram on the right side. The images were sourced from the project instructions provided by LittleBits.'
 						}
 					],
@@ -502,7 +502,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'self-contained-kit',
 		title: 'Self-contained Kit',
-		teaserImg: 'images/sck.png',
+		teaserImg: '/images/sck.png',
 		context: 'Learners, particularly beginners, aim to learn programming using games or kits. This learning takes place either at home in a playful and spontaneous setting or in learning environments such as schools, with educators preparing materials for lessons. Both settings may have limited access to additional resources.',
 		problem: 'For coding kits or games to be fully functional, additional crafting materials, electronic parts, and connectors are required. This leads to learners not being able to use the materials or incurring additional acquisition effort.',
 		forces: [
@@ -538,7 +538,7 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/littlebits.jpg',
+							src: '/images/littlebits.jpg',
 							caption: ''
 						}
 					],
@@ -553,11 +553,11 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/dashblank.jpg',
+							src: '/images/dashblank.jpg',
 							caption: 'Dot and Dash Robots'
 						},
 						{
-							src: 'images/dash2.jpg',
+							src: '/images/dash2.jpg',
 							caption: 'Robots with Launcher Equipment'
 						}
 					],
@@ -571,7 +571,7 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/lego2.jpg',
+							src: '/images/lego2.jpg',
 							caption: ''
 						}
 					],
@@ -586,11 +586,11 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/intia-escape.jpg',
+							src: '/images/intia-escape.jpg',
 							caption: ''
 						},
 						{
-							src: 'images/intia-case.jpg',
+							src: '/images/intia-case.jpg',
 							caption: ''
 						}
 					],
@@ -605,7 +605,7 @@ export const patterns: Pattern[] = [
 				figure: {
 					images: [
 						{
-							src: 'images/iot-kit_emi.jpeg',
+							src: '/images/iot-kit_emi.jpeg',
 							caption: ''
 						}
 					],
