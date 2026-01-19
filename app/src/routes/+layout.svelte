@@ -6,10 +6,10 @@
 
 	const navLinks = [
 		{ href: `${base}/projects`, label: 'Projekte' },
-		{ href: '${base}/didactic', label: 'Didaktik' },
-		{ href: '${base}/patterns', label: 'Muster' },
-		{ href: '${base}/templates', label: 'Vorlagen' },
-		{ href: '${base}/about', label: 'Info' }
+		{ href: `${base}/didactic`, label: 'Didaktik' },
+		{ href: `${base}/patterns`, label: 'Muster' },
+		{ href: `${base}/templates`, label: 'Vorlagen' },
+		{ href: `${base}/about`, label: 'Info' }
 	];
 </script>
 
