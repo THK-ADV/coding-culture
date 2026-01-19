@@ -12,42 +12,42 @@
 			name: 'Standard-Präsentation (16:9)',
 			category: 'Präsentationen',
 			type: 'PPTX',
-			fileUrl: `${base}/templates/standard-presentation.pptx`
+			fileUrl: ''
 		},
 		{
 			id: 2,
 			name: 'Projekt-Evaluationsbogen',
 			category: 'Evaluationen',
 			type: 'DOCX',
-			fileUrl: `${base}/templates/project-evaluation.docx`
+			fileUrl: ''
 		},
 		{
 			id: 3,
 			name: 'Meilenstein-Projektbewertung',
 			category: 'Projektbewertungen',
 			type: 'DOCX',
-			fileUrl: `${base}/templates/milestone-review.docx`
+			fileUrl: ''
 		},
 		{
 			id: 4,
 			name: 'Workshop-Anleitung',
 			category: 'Anleitungen',
 			type: 'DOCX',
-			fileUrl: `${base}/templates/workshop-manual.docx`
+			fileUrl: ''
 		},
 		{
 			id: 5,
 			name: 'Feedback-Karten (Druckvorlage)',
 			category: 'Karten',
 			type: 'PPTX',
-			fileUrl: `${base}/templates/feedback-cards.pptx`
+			fileUrl: ''
 		},
 		{
 			id: 6,
 			name: 'Abschlusspräsentation-Vorlage',
 			category: 'Präsentationen',
 			type: 'PPTX',
-			fileUrl: `${base}/templates/final-presentation.pptx`
+			fileUrl: ''
 		}
 	];
 
