@@ -14,6 +14,7 @@
 	import * as Table from "$lib/components/ui/table/index"
 	import { Button } from '$lib/components/ui/button';
 	import { Input } from '$lib/components/ui/input';
+	import { base } from '$app/paths';
 
 	export let data: PageData;
 
@@ -291,7 +292,7 @@
 						<Table.Row>
 							<Table.Cell>
 								<div>
-									<a href="/projects/{project.id}" class="font-medium text-blue-600 hover:underline">
+									<a href="{base}/projects/{project.id}" class="font-medium text-blue-600 hover:underline">
 										{project.name}
 									</a>
 									<div class="text-sm text-gray-500 max-w-xs truncate" title={project.description}>
