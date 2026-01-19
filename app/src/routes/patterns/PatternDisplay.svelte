@@ -14,6 +14,7 @@
 	import type { Pattern } from '$lib/data/patterns/types';
 	import * as Card from '$lib/components/ui/card';
 	import { Separator } from '$lib/components/ui/separator';
+	import { base } from '$app/paths';
 
 	export let pattern: Pattern;
 
@@ -24,7 +25,7 @@
 <div
 	class="flex flex-col mb-12 items-center w-full grid-cols-1 justify-items-center">
 	<img
-		src={pattern.teaserImg}
+		src="{base}{pattern.teaserImg}"
 		alt={pattern.title}
 		class="rounded-md border-2 object-cover w-full h-auto p-30"
 	/>
