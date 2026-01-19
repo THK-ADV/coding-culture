@@ -177,7 +177,7 @@
 										class:max-w-lg={imageCount === 1}
 									>
 										<img
-											src={img.src}
+											src="{base}{img.src}"
 											alt={img.caption}
 											class="rounded-md border-2 object-cover w-full h-auto"
 										/>
