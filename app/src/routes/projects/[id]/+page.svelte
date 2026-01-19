@@ -3,6 +3,7 @@
 	import { Separator } from '$lib/components/ui/separator';
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
+	import { base } from '$app/paths';
 	import {
 		ArrowLeft,
 		Ruler,
@@ -15,23 +16,14 @@
 		type Icon
 	} from 'lucide-svelte';
 
-	// Wichtig: Verwenden Sie let statt const { project } = data;
 	export let data: PageData;
 
-	// Destrukturierung und Absicherung im reaktiven Block, um den undefinierten Zugriff im Header zu verhindern.
-	// Alternativ können wir im Template mit {#if data.project} arbeiten.
-	// Da die load-Funktion einen 404 werfen sollte, ist das Fehlen von data.project unwahrscheinlich,
-	// aber wir verwenden data.project direkt im Markup, um den Fehler bei fehlendem Projekt abzufangen.
-
-	// HILFS-TYP für die MetadataItem Funktion
 	type MetadataProps = {
 		icon: typeof Icon; // Typisierung für Lucide Svelte Komponenten
 		title: string;
 		value: string;
 	};
 
-	// KORREKTUR FÜR PARSING ERROR: MetadataItem ALS JS/TS FUNKTION DEFINIEREN
-	// Diese Funktion rendert HTML/Svelte, darf aber nicht in Curly Braces im Template stehen.
 	function MetadataItem({ icon: Icon, title, value }: MetadataProps) {
 		return (
 			`<div class="flex flex-col space-y-1">
@@ -69,7 +61,7 @@
 	<main class="mx-auto max-w-4xl p-4 py-8 md:p-6 md:py-12 space-y-8">
 
 		<div class="mb-4">
-			<a href="/projects" class="text-blue-600 hover:text-blue-800 flex items-center transition-colors">
+			<a href="{base}/projects" class="text-blue-600 hover:text-blue-800 flex items-center transition-colors">
 				<ArrowLeft class="mr-2 h-4 w-4" />
 				Zurück zur Projektübersicht
 			</a>

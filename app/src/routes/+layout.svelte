@@ -24,7 +24,7 @@
 				<ul class="-mb-px flex space-x-2 overflow-x-auto whitespace-nowrap md:overflow-visible">
 					{#each navLinks as link (link.href)}
 						{@const isActive =
-							link.href === '/about'
+							link.href === `${base}/about`
 								? $page.url.pathname === link.href
 								: $page.url.pathname.startsWith(link.href)}
 
