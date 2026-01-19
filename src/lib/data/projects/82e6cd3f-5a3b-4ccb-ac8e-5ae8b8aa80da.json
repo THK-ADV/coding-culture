@@ -1,0 +1,30 @@
+{
+  "id": "82e6cd3f-5a3b-4ccb-ac8e-5ae8b8aa80da",
+  "name": "Glücksorakel",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "if else",
+    "Boolean",
+    "Variablen"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 45,
+  "maxDuration": 90,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Leitfähigkeitsschalter",
+    "Krokodilklemmen-Kabel",
+    "Aluminiumfolie",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC"
+  ]
+}

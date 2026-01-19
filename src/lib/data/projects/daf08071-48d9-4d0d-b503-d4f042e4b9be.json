@@ -1,0 +1,25 @@
+{
+  "id": "daf08071-48d9-4d0d-b503-d4f042e4b9be",
+  "name": "Safe + Erweiterung",
+  "description": "Beschreibung",
+  "product": "lego spike prime",
+  "content": [
+    "if else",
+    "Loops",
+    "Boolean",
+    "computational thinking"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based"
+  ],
+  "minDuration": 90,
+  "maxDuration": 180,
+  "minGroup": 2,
+  "maxGroup": 3,
+  "type": "IoT",
+  "materials": [
+    "Lego Spike Prime Baukastn",
+    "PC"
+  ]
+}

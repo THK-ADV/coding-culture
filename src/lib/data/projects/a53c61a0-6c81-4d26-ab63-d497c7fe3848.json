@@ -1,0 +1,27 @@
+{
+  "id": "a53c61a0-6c81-4d26-ab63-d497c7fe3848",
+  "name": "Alarmanlage",
+  "description": "Beschreibung",
+  "product": "fischertechnik",
+  "content": [
+    "if else",
+    "Boolean",
+    "Variablen"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 60,
+  "maxDuration": 120,
+  "minGroup": 2,
+  "maxGroup": 3,
+  "type": "IoT",
+  "materials": [
+    "fischertechnik Baukasten",
+    "calliope",
+    "PC"
+  ]
+}

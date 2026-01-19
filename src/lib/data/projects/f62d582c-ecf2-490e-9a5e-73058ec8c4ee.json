@@ -1,0 +1,35 @@
+{
+  "id": "f62d582c-ecf2-490e-9a5e-73058ec8c4ee",
+  "name": "Tug of War",
+  "description": "Beschreibung",
+  "product": "LittleBits",
+  "content": [
+    "if else",
+    "Variablen",
+    "Loops",
+    "Boolean"
+  ],
+  "complexity": 3,
+  "language": [
+    "Block-based",
+    "JavaScript"
+  ],
+  "minDuration": 90,
+  "maxDuration": 180,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Codebit",
+    "Powersnaps",
+    "Buttons",
+    "LED Matrix",
+    "Mounting Boards",
+    "Befestigungsteile",
+    "Batteriepack mit Batterien",
+    "PC",
+    "Papier",
+    "Stifte",
+    "Schere"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "255f8435-968b-455e-a52e-9e2c92bcb4bf",
+  "name": "Feuchtigkeitssensor",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "if else",
+    "computational thinking",
+    "Variablen"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 30,
+  "maxDuration": 60,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Feuchtigkeitssensor",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC"
+  ]
+}

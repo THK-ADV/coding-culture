@@ -1,0 +1,33 @@
+{
+  "id": "8b55e83a-f5e7-4759-9d0c-7cc0e4297f43",
+  "name": "Hot Potato... of Doom!",
+  "description": "Beschreibung",
+  "product": "LittleBits",
+  "content": [
+    "if else",
+    "Variablen",
+    "Loops"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript"
+  ],
+  "minDuration": 60,
+  "maxDuration": 120,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Button",
+    "Codebit",
+    "LED Matrix",
+    "Lautsprecher",
+    "Mounting Board",
+    "Batteriepack mit Batterien",
+    "PC",
+    "Papier",
+    "Stifte",
+    "Schere"
+  ]
+}

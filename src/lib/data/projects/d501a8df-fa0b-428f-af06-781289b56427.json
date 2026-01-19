@@ -1,0 +1,24 @@
+{
+  "id": "d501a8df-fa0b-428f-af06-781289b56427",
+  "name": "Gedächtnisspiel",
+  "description": "Beschreibung",
+  "product": "lego spike prime",
+  "content": [
+    "if else",
+    "Loops",
+    "Boolean"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based"
+  ],
+  "minDuration": 90,
+  "maxDuration": 180,
+  "minGroup": 2,
+  "maxGroup": 3,
+  "type": "IoT",
+  "materials": [
+    "Lego Spike Prime Baukastn",
+    "PC"
+  ]
+}

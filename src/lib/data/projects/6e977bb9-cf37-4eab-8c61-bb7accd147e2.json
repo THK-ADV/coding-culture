@@ -1,0 +1,27 @@
+{
+  "id": "6e977bb9-cf37-4eab-8c61-bb7accd147e2",
+  "name": "Alarm",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "if else"
+  ],
+  "complexity": 1,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 30,
+  "maxDuration": 60,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Lautsprecher",
+    "Bewegungssensor",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC"
+  ]
+}

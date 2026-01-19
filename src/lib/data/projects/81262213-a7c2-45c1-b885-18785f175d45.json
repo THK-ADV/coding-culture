@@ -1,0 +1,28 @@
+{
+  "id": "81262213-a7c2-45c1-b885-18785f175d45",
+  "name": "Reaktionsspiel",
+  "description": "Beschreibung",
+  "product": "Calliope Mini",
+  "content": [
+    "if else",
+    "Loops",
+    "computational thinking",
+    "Variablen",
+    "Funktionen"
+  ],
+  "complexity": 3,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 90,
+  "maxDuration": 180,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "Einplatinencomputer",
+  "materials": [
+    "calliope",
+    "PC"
+  ]
+}

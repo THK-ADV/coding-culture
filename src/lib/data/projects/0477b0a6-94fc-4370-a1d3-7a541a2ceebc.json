@@ -1,0 +1,35 @@
+{
+  "id": "0477b0a6-94fc-4370-a1d3-7a541a2ceebc",
+  "name": "Eierlauf",
+  "description": "Beschreibung",
+  "product": "Calliope Mini",
+  "content": [
+    "if else",
+    "Boolean",
+    "computational thinking"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 60,
+  "maxDuration": 120,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "Einplatinencomputer",
+  "materials": [
+    "calliope",
+    "Batteriepack mit Batterien",
+    "Klebeband",
+    "Heißkleber",
+    "Löffel",
+    "Stifte",
+    "Stecknadeln",
+    "Paper",
+    "Cutter",
+    "Schere",
+    "PC"
+  ]
+}

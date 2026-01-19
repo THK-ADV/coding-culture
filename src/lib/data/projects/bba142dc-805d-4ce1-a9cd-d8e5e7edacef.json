@@ -1,0 +1,29 @@
+{
+  "id": "bba142dc-805d-4ce1-a9cd-d8e5e7edacef",
+  "name": "Drehzahlsteuerung",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "if else",
+    "Variablen",
+    "Boolean"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 45,
+  "maxDuration": 90,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Rotationssensor",
+    "Ventilator",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC"
+  ]
+}

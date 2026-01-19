@@ -1,0 +1,23 @@
+{
+	"id": "UUID",
+	"name": "Name",
+	"description": "Beschreibung",
+	"product": "Produkt",
+	"content": [
+		"Keyword 1",
+		"Keyword 2",
+		"Keword 3"
+	],
+	"complexity": 1,
+	"language": ["Python"],
+	"minDuration": 30,
+	"maxDuration": 60,
+	"minGroup": 1,
+	"maxGroup": 3,
+	"type": "Konsolenspiel",
+	"materials": [
+		"Computer",
+		"Schere",
+		"Papier"
+	]
+}

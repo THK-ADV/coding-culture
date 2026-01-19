@@ -1,0 +1,36 @@
+{
+  "id": "9f7c1ce5-58c1-42a2-b37c-29736a6d13ec",
+  "name": "Rockstar Guitar",
+  "description": "Beschreibung",
+  "product": "LittleBits",
+  "content": [
+    "if else",
+    "Variablen",
+    "Boolean"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript"
+  ],
+  "minDuration": 30,
+  "maxDuration": 60,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Slide Dimmer",
+    "Codebit",
+    "Powersnap",
+    "Button",
+    "LED Matrix",
+    "Lautsprecher",
+    "Mounting Board",
+    "Befestigungsteile",
+    "Batteriepack mit Batterien",
+    "PC",
+    "Papier",
+    "Stifte",
+    "Schere"
+  ]
+}

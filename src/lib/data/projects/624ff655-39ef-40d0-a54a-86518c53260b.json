@@ -1,0 +1,29 @@
+{
+  "id": "624ff655-39ef-40d0-a54a-86518c53260b",
+  "name": "Sanduhr",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "if else",
+    "Boolean",
+    "Variablen"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 45,
+  "maxDuration": 90,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Druckknopf",
+    "Lautsprecher",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC"
+  ]
+}

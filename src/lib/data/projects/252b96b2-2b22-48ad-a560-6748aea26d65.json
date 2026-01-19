@@ -1,0 +1,26 @@
+{
+  "id": "252b96b2-2b22-48ad-a560-6748aea26d65",
+  "name": "Ventilator",
+  "description": "Beschreibung",
+  "product": "fischertechnik",
+  "content": [
+    "if else",
+    "Boolean"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 60,
+  "maxDuration": 120,
+  "minGroup": 2,
+  "maxGroup": 3,
+  "type": "IoT",
+  "materials": [
+    "fischertechnik Baukasten",
+    "calliope",
+    "PC"
+  ]
+}

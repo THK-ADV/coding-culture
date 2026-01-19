@@ -1,0 +1,31 @@
+{
+  "id": "cdfc17c3-5956-4368-8579-7cead0ea6113",
+  "name": "Automatische Tür",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "if else"
+  ],
+  "complexity": 1,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 30,
+  "maxDuration": 45,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Bewegungssensor",
+    "Servomotor",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC",
+    "Papier",
+    "Schere",
+    "Stifte",
+    "Klebeband"
+  ]
+}

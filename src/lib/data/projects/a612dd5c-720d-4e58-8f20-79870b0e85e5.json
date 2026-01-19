@@ -1,0 +1,26 @@
+{
+  "id": "a612dd5c-720d-4e58-8f20-79870b0e85e5",
+  "name": "Heiße Kartoffel",
+  "description": "Beschreibung",
+  "product": "micro:bit",
+  "content": [
+    "if else",
+    "Variablen",
+    "Loops"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 45,
+  "maxDuration": 90,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "Einplatinencomputer",
+  "materials": [
+    "micro:bit",
+    "PC"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "73d42a75-df69-4ba9-b515-cff71ab8a095",
+  "name": "Ultimate Shootout",
+  "description": "Beschreibung",
+  "product": "LittleBits",
+  "content": [
+    "if else",
+    "Variablen"
+  ],
+  "complexity": 1,
+  "language": [
+    "Block-based",
+    "JavaScript"
+  ],
+  "minDuration": 30,
+  "maxDuration": 60,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Codebit",
+    "Powersnap",
+    "Button",
+    "LED Matrix",
+    "Mounting Board",
+    "Batteriepack mit Batterien",
+    "PC",
+    "Papier",
+    "Stifte",
+    "Schere"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "40b4f04b-be7f-4174-b006-a037d7c2d327",
+  "name": "Tamagotchi",
+  "description": "Beschreibung",
+  "product": "-",
+  "content": [
+    "Variablen",
+    "if else",
+    "Boolean",
+    "Liste",
+    "Loops",
+    "Input Output",
+    "Funktionen"
+  ],
+  "complexity": 3,
+  "language": ["Python"],
+  "minDuration": 360,
+  "maxDuration": 540,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "Konsolenprogrammierung",
+  "materials": [
+    "PC mit Code Editor und Python Compiler"
+  ]
+}

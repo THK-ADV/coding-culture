@@ -1,0 +1,26 @@
+{
+  "id": "af3e81fe-8943-483e-9464-b328e5a37137",
+  "name": "Würfel",
+  "description": "Beschreibung",
+  "product": "micro:bit",
+  "content": [
+    "if else",
+    "Variablen",
+    "computational thinking"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 30,
+  "maxDuration": 60,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "Einplatinencomputer",
+  "materials": [
+    "micro:bit",
+    "PC"
+  ]
+}

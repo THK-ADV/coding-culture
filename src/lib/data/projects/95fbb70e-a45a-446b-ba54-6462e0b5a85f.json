@@ -1,0 +1,23 @@
+{
+  "id": "95fbb70e-a45a-446b-ba54-6462e0b5a85f",
+  "name": "Adventure",
+  "description": "Beschreibung",
+  "product": "-",
+  "content": [
+    "Loops",
+    "Variablen",
+    "if else",
+    "Boolean",
+    "computational thinking"
+  ],
+  "complexity": 3,
+  "language": ["Scratch"],
+  "minDuration": 60,
+  "maxDuration": 120,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "Scratch Game",
+  "materials": [
+    "PC mit Internet"
+  ]
+}

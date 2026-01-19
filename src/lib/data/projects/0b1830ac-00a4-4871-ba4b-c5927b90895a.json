@@ -1,0 +1,29 @@
+{
+  "id": "0b1830ac-00a4-4871-ba4b-c5927b90895a",
+  "name": "Pocket Pin",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "if else",
+    "Boolean"
+  ],
+  "complexity": 1,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 30,
+  "maxDuration": 45,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Geräuschesensor",
+    "Bewegungssensor",
+    "Servomotor",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "6190de77-9755-476f-a496-3e4bb2cfe0df",
+  "name": "Musikbox",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "if else"
+  ],
+  "complexity": 1,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 30,
+  "maxDuration": 60,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Geräuschsensor",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC"
+  ]
+}

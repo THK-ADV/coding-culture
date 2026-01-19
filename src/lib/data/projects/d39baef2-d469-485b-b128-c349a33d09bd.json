@@ -1,0 +1,28 @@
+{
+  "id": "d39baef2-d469-485b-b128-c349a33d09bd",
+  "name": "Fußgängerampel",
+  "description": "Beschreibung",
+  "product": "fischertechnik",
+  "content": [
+    "if else",
+    "Boolean",
+    "Variablen",
+    "Loops"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 60,
+  "maxDuration": 120,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "fischertechnik Baukasten",
+    "calliope",
+    "PC"
+  ]
+}

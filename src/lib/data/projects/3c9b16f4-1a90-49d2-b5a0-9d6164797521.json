@@ -1,0 +1,25 @@
+{
+  "id": "3c9b16f4-1a90-49d2-b5a0-9d6164797521",
+  "name": "Pet",
+  "description": "Beschreibung",
+  "product": "micro:bit",
+  "content": [
+    "if else",
+    "Variablen"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 45,
+  "maxDuration": 90,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "Einplatinencomputer",
+  "materials": [
+    "micro:bit",
+    "PC"
+  ]
+}

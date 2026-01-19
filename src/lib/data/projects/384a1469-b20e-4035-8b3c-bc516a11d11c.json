@@ -1,0 +1,30 @@
+{
+  "id": "384a1469-b20e-4035-8b3c-bc516a11d11c",
+  "name": "Lichtmixer",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "if else",
+    "Boolean",
+    "Variablen",
+    "Funktionen",
+    "computational thinking"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 60,
+  "maxDuration": 90,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Rotationssensor",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC"
+  ]
+}

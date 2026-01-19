@@ -1,0 +1,27 @@
+{
+  "id": "9bde3a9f-e1e0-4cb1-b861-42a2b3f04dfc",
+  "name": "Ventilator",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "if else"
+  ],
+  "complexity": 1,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 30,
+  "maxDuration": 60,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Druckknopf",
+    "Ventilator",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC"
+  ]
+}

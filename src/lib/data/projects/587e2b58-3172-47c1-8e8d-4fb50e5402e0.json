@@ -1,0 +1,30 @@
+{
+  "id": "587e2b58-3172-47c1-8e8d-4fb50e5402e0",
+  "name": "Schrank",
+  "description": "Beschreibung",
+  "product": "Boson Inventor Kit",
+  "content": [
+    "Variablen",
+    "computational thinking"
+  ],
+  "complexity": 1,
+  "language": [
+    "Block-based",
+    "Python",
+    "JavaScript"
+  ],
+  "minDuration": 30,
+  "maxDuration": 60,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "Mini-Servo",
+    "Rotationssensor",
+    "Expansion Board",
+    "calliope oder micro:bit",
+    "PC",
+    "Strohhalm",
+    "Klebeband"
+  ]
+}

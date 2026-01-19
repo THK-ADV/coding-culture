@@ -1,0 +1,34 @@
+{
+  "id": "089122eb-6cc0-47da-8ee2-4464c7d7d083",
+  "name": "Bewegungsspiel",
+  "description": "Beschreibung",
+  "product": "Calliope Mini",
+  "content": [
+    "if else",
+    "Boolean",
+    "computational thinking",
+    "Variablen",
+    "Funktionen"
+  ],
+  "complexity": 3,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 120,
+  "maxDuration": 240,
+  "minGroup": 2,
+  "maxGroup": 3,
+  "type": "Einplatinencomputer",
+  "materials": [
+    "3 - 7 calliope",
+    "3 - 7 Batteriepack mit Batterien",
+    "Schnur",
+    "Büroklammer",
+    "Lautsprecher",
+    "3 - 7 Tischtennisbälle",
+    "2 Krokodilklemmen",
+    "PC"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ed4622b4-f27d-4b1e-a81a-8f143ee07f5e",
+  "name": "Schranke",
+  "description": "Beschreibung",
+  "product": "fischertechnik",
+  "content": [
+    "if else",
+    "Boolean"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 60,
+  "maxDuration": 120,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "fischertechnik Baukasten",
+    "calliope",
+    "PC"
+  ]
+}

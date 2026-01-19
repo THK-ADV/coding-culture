@@ -1,0 +1,27 @@
+{
+  "id": "0c95ecef-8849-4b8a-b45e-1a93df8da0f4",
+  "name": "Wasserwaage",
+  "description": "Beschreibung",
+  "product": "fischertechnik",
+  "content": [
+    "if else",
+    "Boolean",
+    "Variablen"
+  ],
+  "complexity": 2,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 45,
+  "maxDuration": 90,
+  "minGroup": 1,
+  "maxGroup": 2,
+  "type": "IoT",
+  "materials": [
+    "fischertechnik Baukasten",
+    "calliope",
+    "PC"
+  ]
+}
