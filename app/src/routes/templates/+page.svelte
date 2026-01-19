@@ -12,42 +12,42 @@
 			name: 'Standard-Präsentation (16:9)',
 			category: 'Präsentationen',
 			type: 'PPTX',
-			fileUrl: '/templates/standard-presentation.pptx'
+			fileUrl: `${base}/templates/standard-presentation.pptx`
 		},
 		{
 			id: 2,
 			name: 'Projekt-Evaluationsbogen',
 			category: 'Evaluationen',
 			type: 'DOCX',
-			fileUrl: '/templates/project-evaluation.docx'
+			fileUrl: `${base}/templates/project-evaluation.docx`
 		},
 		{
 			id: 3,
 			name: 'Meilenstein-Projektbewertung',
 			category: 'Projektbewertungen',
 			type: 'DOCX',
-			fileUrl: '/templates/milestone-review.docx'
+			fileUrl: `${base}/templates/milestone-review.docx`
 		},
 		{
 			id: 4,
 			name: 'Workshop-Anleitung',
 			category: 'Anleitungen',
 			type: 'DOCX',
-			fileUrl: '/templates/workshop-manual.docx'
+			fileUrl: `${base}/templates/workshop-manual.docx`
 		},
 		{
 			id: 5,
 			name: 'Feedback-Karten (Druckvorlage)',
 			category: 'Karten',
 			type: 'PPTX',
-			fileUrl: '/templates/feedback-cards.pptx'
+			fileUrl: `${base}/templates/feedback-cards.pptx`
 		},
 		{
 			id: 6,
 			name: 'Abschlusspräsentation-Vorlage',
 			category: 'Präsentationen',
 			type: 'PPTX',
-			fileUrl: '/templates/final-presentation.pptx'
+			fileUrl: `${base}/templates/final-presentation.pptx`
 		}
 	];
 
@@ -71,12 +71,10 @@
 		</p>
 	</div>
 
-	<!-- 6. Die Tabelle mit den Downloads -->
 	<div class="border rounded-lg">
 		<Table.Root>
 			<Table.Header>
 				<Table.Row>
-					<!-- Wir geben der ersten Spalte eine feste Mindestbreite -->
 					<Table.Head class="w-[350px]">Vorlage</Table.Head>
 					<Table.Head>Kategorie</Table.Head>
 					<Table.Head>Dateityp</Table.Head>
