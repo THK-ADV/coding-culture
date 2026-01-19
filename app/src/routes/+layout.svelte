@@ -2,17 +2,15 @@
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 
 	const navLinks = [
-		{ href: '/projects', label: 'Projekte' },
-		{ href: '/didactic', label: 'Didaktik' },
-		{ href: '/patterns', label: 'Muster' },
-		{ href: '/templates', label: 'Vorlagen' },
-		{ href: '/about', label: 'Info' }
+		{ href: `${base}/projects`, label: 'Projekte' },
+		{ href: '${base}/didactic', label: 'Didaktik' },
+		{ href: '${base}/patterns', label: 'Muster' },
+		{ href: '${base}/templates', label: 'Vorlagen' },
+		{ href: '${base}/about', label: 'Info' }
 	];
-
-	export const prerender = true;
-	export const trailingSlash = 'always';
 </script>
 
 <svelte:head>
