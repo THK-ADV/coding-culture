@@ -28,10 +28,9 @@ coding-culture-oberberg/
 │   ├── static/
 │   └── package.json
 │
-├── 📚 book/             # LaTeX Source Code des Buchs
-│   ├── chapters/        # Einzelne Kapitel
-│   ├── images/          # Grafiken und Diagramme
-│   └── main.tex         # Hauptdatei
+├── 📚 booklet/             # LaTeX Source Code des Buchs
+│   └── book.tex         # Hauptdatei
+│   └── main.pdf         # Kompilierte PDF
 │
 └── README.md            # Diese Datei
 ```
