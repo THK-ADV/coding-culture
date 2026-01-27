@@ -18,10 +18,10 @@
 	];
 </script>
 
-<div class="container mx-auto max-w-4xl py-12 px-4">
+<div class="container mx-auto py-12 px-4">
 
 	<h1 class="text-4xl font-bold tracking-tight mb-4">
-		Über das Projekt
+		Über uns
 	</h1>
 
 	<p class="text-lg text-muted-foreground mb-8">

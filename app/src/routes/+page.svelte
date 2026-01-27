@@ -8,8 +8,33 @@
 		Check,
 		Puzzle,
 		Waypoints,
-		Globe
+		Globe, ScrollText
 	} from 'lucide-svelte';
+	import * as Accordion from '$lib/components/ui/accordion';
+	import type { Citation } from '$lib/data/patterns/types';
+
+	let citations: Citation[] = [
+		{
+			id: 1,
+			reference: 'Rambusch, J., & Ziemke, T. (2005, July). The role of embodiment in situated learning. In <em>Proceedings of the 27th Annual Conference of the Cognitive Science Society</em> (pp. 1803-1808). Mahwah, NJ: Lawrence Erlbaum.'
+		},
+		{
+			id: 2,
+			reference: 'Glenberg, A. M. (2010). Embodiment as a unifying perspective for psychology. <em>Wiley interdisciplinary reviews: Cognitive science, 1</em>(4), 586-596.'
+		},
+		{
+			id: 3,
+			reference: 'Alibali, M. W., & Nathan, M. J. (2012). Embodiment in mathematics teaching and learning: Evidence from learners\' and teachers\' gestures. <em>Journal of the learning sciences, 21</em>(2), 247-286.'
+		},
+		{
+			id: 4,
+			reference: 'Junge, M. (Ed.). (2010). <em>Metaphern in Wissenskulturen.</em> VS, Verlag für Sozialwiss..'
+		},
+		{
+			id: 5,
+			reference: 'Schubert, S., & Schwill, A. (2011). Didaktik der Informatik. In <em>Didaktik der Informatik</em> (pp. 1-30). Heidelberg: Spektrum Akademischer Verlag.'
+		},
+	]
 	const embodimentList = [
 		'<strong>Sinnliche Erfahrung:</strong> Statt Code nur auf einem Bildschirm zu sehen, werden Konzepte durch haptische (fühlbare) und spielerische Materialien sinnlich erfahrbar.',
 		'<strong>Aktive Exploration:</strong> Lernende können mit physischen Artefakten „herumspielen“, Anordnungen ausprobieren und dynamische Veränderungen von Zuständen direkt wahrnehmen.',
@@ -43,7 +68,7 @@
 	<title>Über das Projekt: Coding Culture Oberberg</title>
 </svelte:head>
 
-<main class="mx-auto max-w-4xl p-4 py-12 md:p-16 prose dark:prose-invert lg:prose-lg max-w-none">
+<main class="mx-auto p-4 py-12 md:p-16 prose dark:prose-invert lg:prose-lg">
 
 	<Alert class="mb-10 border-teal-500 bg-teal-50 text-teal-900 dark:border-teal-600 dark:bg-teal-950 dark:text-teal-200">
 		<Award class="h-5 w-5 !text-teal-600" />
@@ -70,8 +95,8 @@
 			Die Theorie des Embodiments
 		</h2>
 		<div class="mt-4">
-			Der didaktische Ansatz des Projekts basiert auf der Theorie des „Embodiment of Learning“. Diese geht davon aus, dass Wissensproduktion nicht von unserem Körper, unserer Sprache und unserer sozialen Entwicklung getrennt werden kann. Geist und Körper sollten nicht als getrennt, sondern als eine interagierende Einheit gesehen werden <sup><a href="#ref-1" title="Zur Quelle springen">[1]</a></sup>.<br>
-			Für das Lernen bedeutet dies: Wenn wir Lerninhalte körperlich erfahren, verankern sie sich tiefer. Mentale Prozesse werden durch körperliche Systeme wie Bewegungen, das motorische System und den Wahrnehmungsapparat unterstützt <sup><a href="#ref-2" title="Zur Quelle springen">[2]</a></sup>. Das Wissen selbst wird verkörpert – „the knowledge itself is embodied“ <sup><a href="#ref-3" title="Zur Quelle springen">[3]</a></sup>.<br>
+			Der didaktische Ansatz des Projekts basiert auf der Theorie des „Embodiment of Learning“. Diese geht davon aus, dass Wissensproduktion nicht von unserem Körper, unserer Sprache und unserer sozialen Entwicklung getrennt werden kann. Geist und Körper sollten nicht als getrennt, sondern als eine interagierende Einheit gesehen werden <sup>[1]</sup>.<br>
+			Für das Lernen bedeutet dies: Wenn wir Lerninhalte körperlich erfahren, verankern sie sich tiefer. Mentale Prozesse werden durch körperliche Systeme wie Bewegungen, das motorische System und den Wahrnehmungsapparat unterstützt <sup>[2]</sup>. Das Wissen selbst wird verkörpert – „the knowledge itself is embodied“ <sup>[3]</sup>.<br>
 			Für die Informatikdidaktik ist dieser Ansatz besonders relevant:
 		</div>
 
@@ -108,7 +133,7 @@
 		</div>
 
 		<div>
-			Um diese Abstraktionen zu vermitteln, spielen <strong>Metaphern</strong> eine zentrale Rolle im Erkenntnisprozess <sup><a href="#ref-4" title="Zur Quelle springen">[4]</a></sup>. Das Projekt greift etablierte Metaphern aus der Didaktik der Informatik auf <sup><a href="#ref-5" title="Zur Quelle springen">[5]</a></sup> und entwickelt für sie anschauliche, physische und „begreifbare“ Materialien. Ein Stapelspeicher wird so zu einem echten, physischen Stapel, dessen Operationen (push/pop) man manuell durchführen muss.
+			Um diese Abstraktionen zu vermitteln, spielen <strong>Metaphern</strong> eine zentrale Rolle im Erkenntnisprozess <sup>[4]</sup>. Das Projekt greift etablierte Metaphern aus der Didaktik der Informatik auf <sup>[5]</sup> und entwickelt für sie anschauliche, physische und „begreifbare“ Materialien. Ein Stapelspeicher wird so zu einem echten, physischen Stapel, dessen Operationen (push/pop) man manuell durchführen muss.
 		</div>
 	</section>
 
@@ -155,20 +180,42 @@
 		</AlertDescription>
 	</Alert>
 
-	<Separator class="my-12" />
+	<section class="border-t pt-10">
+		<Accordion.Root transition={true}>
+			<Accordion.Item value="sources" class="border-none">
+				<Accordion.Trigger class="hover:no-underline py-2">
+					<div class="flex items-center gap-3">
+						<div class="p-2 bg-secondary rounded-md text-muted-foreground">
+							<ScrollText class="h-4 w-4" />
+						</div>
+						<div class="text-left">
+							<h2 class="text-xl font-semibold tracking-tight">Quellen</h2>
+							<p class="text-xs text-muted-foreground font-normal">
+								{citations.length} Referenzen anzeigen
+							</p>
+						</div>
+					</div>
+				</Accordion.Trigger>
 
-	<section>
-		<h2 class="text-3xl font-semibold tracking-tight">Quellen</h2>
+				<Accordion.Content class="pt-6 pb-2">
+					<ul class="flex flex-col gap-4">
+						{#each citations as citation (citation.id)}
+							<li
+								id="ref-{citation.id}"
+								class="group flex items-start text-sm leading-relaxed text-muted-foreground hover:text-foreground transition-colors"
+							>
+              <span class="mr-4 flex-shrink-0 font-mono text-[10px] bg-muted px-1.5 py-0.5 rounded text-muted-foreground/80">
+                {citation.id.toString().padStart(2, '0')}
+              </span>
 
-		<div class="mt-6">
-			<ol class="list-decimal list-outside pl-5">
-				<li id="ref-1">Rambusch, J., & Ziemke, T. (2005, July). The role of embodiment in situated learning. In <em>Proceedings of the 27th Annual Conference of the Cognitive Science Society</em> (pp. 1803-1808). Mahwah, NJ: Lawrence Erlbaum.</li>
-				<li id="ref-2">Glenberg, A. M. (2010). Embodiment as a unifying perspective for psychology. <em>Wiley interdisciplinary reviews: Cognitive science, 1</em>(4), 586-596.</li>
-				<li id="ref-3">Alibali, M. W., & Nathan, M. J. (2012). Embodiment in mathematics teaching and learning: Evidence from learners' and teachers' gestures. <em>Journal of the learning sciences, 21</em>(2), 247-286.</li>
-				<li id="ref-4">Junge, M. (Ed.). (2010). <em>Metaphern in Wissenskulturen.</em> VS, Verlag für Sozialwiss..</li>
-				<li id="ref-5">Schubert, S., & Schwill, A. (2011). Didaktik der Informatik. In <em>Didaktik der Informatik</em> (pp. 1-30). Heidelberg: Spektrum Akademischer Verlag.</li>
-			</ol>
-		</div>
+								<span class="flex-1">
+                {@html citation.reference}
+              </span>
+							</li>
+						{/each}
+					</ul>
+				</Accordion.Content>
+			</Accordion.Item>
+		</Accordion.Root>
 	</section>
-
 </main>

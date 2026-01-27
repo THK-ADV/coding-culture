@@ -4,6 +4,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'code-without-code',
 		title: 'Code Without Code',
+		description: 'Präsentieren Sie zunächst codebasierte Konzepte ohne Code, sondern mit physischen, greifbaren Objekten.',
 		context:
 			'As part of a low-level workshop, new computer science concepts, such as algorithms, should be taught to participants. The workshop is aimed at students without prior experience. The workshop focuses mainly on teaching coding-based concepts and is conducted by a computer science expert.',
 		problem:
@@ -75,6 +76,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'hands-on-first',
 		title: 'Hands On First',
+		description: 'Einführung eines ersten praktischen Teils als Ausgangspunkt des Workshops.',
 		context:
 			'As part of a coding workshop, the educators\' main goal is to keep participants motivated and engaged. At the same time, participants should get hands-on experience about the learned concepts. When planning the sequence of a workshop, educators consider different established approaches.',
 		problem:
@@ -89,7 +91,7 @@ export const patterns: Pattern[] = [
 			'<li><strong>Interaction:</strong> Frontal input only allows very limited interaction for the participants. </li></ul>'
 		],
 		solution:
-			'<i>Introduce an initial practical part as the starting point of the workshop</i><br>' +
+			'<i>Introduce an initial practical part as the starting point of the workshop.</i><br>' +
 			'Instead of a frontal input as an introduction, the workshop should start with a practical part. This practical phase focuses on the interactive examination of the given topic. The teacher should allow the interactive exploration of the topic and act as support for learners if problems or barriers occur. This approach is also supported by the learning orientation "constructivism," which describes learning as the process of learners actively constructing knowledge. The learner is an active participant in the process and requires engagement <sup>[22]</sup>. As this solution describes an initial hands-on part, the example from the <i>Code without Code</i> pattern can be applied here. In the context of learning basic algorithms, participants can freely experiment with the existing building blocks to get a first understanding of a new topic. Afterward, further explanation should be provided by the workshop leader. For this running example, it is important to note that the solution of <i>Hands-on first</i> is not only restricted to get hands-on with physical objects but can also allow for an initial exploration in code.',
 		consequences: {
 			benefits: [
@@ -153,6 +155,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'teamwork',
 		title: 'Teamwork Makes The Dream Work',
+		description: 'Führen Sie kollaborative Ansätze in Programmier-Workshops ein.',
 		context: 'In coding workshops, there exists a variety of potential teaching formats. The traditional approach to convey knowledge relies on independent application of solutions to provided tasks.',
 		problem: 'If workshop participants work on tasks individually, they can only draw on their own skill set and thus only consolidate their own strengths and weaknesses. It is not possible to benefit from the knowledge of other participants.',
 		forces: [
@@ -217,6 +220,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'connect-the-pieces',
 		title: 'Connect the Pieces',
+		description: 'Implementieren Sie einen Moment im Workshop, in dem alle bisherigen Themen miteinander verbunden und in Beziehung gesetzt werden.',
 		context: 'In a coding workshop, different contents, which are related to a bigger topic, are taught. Even if these topics belong to a common domain, they are initially treated separately and independently of each other. This approach aligns with the principle of "Divide & Conquer", breaking down complex subjects into smaller, more manageable units. Furthermore, in consideration of the cognitive load theory, the separate introduction of individual theory leads to a reduction in the cognitive burden on participants <sup>[18]</sup>.',
 		problem: 'Participants are unable to detect the relevance of the individual topics in relation to each other and to the common topic. This lowers the motivation of the participants and thus reduces their commitment to the workshop.',
 		forces: [
@@ -258,6 +262,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'take-it-home',
 		title: 'Take It Home',
+		description: 'Verschenken Sie greifbare Artefakte für eine bessere Einprägung.',
 		context: 'The pivotal point of coding workshops lies in knowledge dissemination, which involves the effective transfer of information and skills from the facilitator to the participants. Most of these workshops are self-contained, lacking subsequent tasks or assignments as well as follow-up workshops. Upon the conclusion of coding workshops, learners leave the knowledge field that was taught.',
 		problem: 'Participants face challenges retaining coding concepts post-workshop without reinforcement. This inability to retain knowledge leads to a decline in proficiency and limited application of learned skills. This challenge primarily stems from the absence of regular repetition of the acquired content.',
 		forces: [
@@ -267,7 +272,7 @@ export const patterns: Pattern[] = [
 			'<li><strong>External Distractions:</strong> Engagement with other events might distract learners from the acquired knowledge and impact retention.</li>',
 			'<li><strong>Missing Hardware:</strong> Not every workshop participant owns appropriate hardware, to apply the newly acquired knowledge at home.</li></ul>'
 		],
-		solution: '<i>Gift tangible artifacts for enhanced retention</i><br>Deliver a tangible artifact to participants at the workshop\'s conclusion. This artifact, whether physical or digital, serves as a continuous reminder of key lessons, encouraging individuals to enhance their newly acquired skills. It ideally doubles as a tool to retrace developed solutions. This highlights the importance of its practical relevance beyond mere play. Small objects are particularly effective in this context, because they can be taken anywhere to bring the reminder into different environments.<br>To further emphasize the artifacts\' purpose beyond mere mementos, it is crucial that these items are directly linked to the workshop\'s core content, providing a tangible means for participants to revisit and practice the learned material. This approach transforms the artifact from a simple keepsake into a functional component of the learning experience, extending its educational impact well beyond the workshop setting.<br>For applying this solution, it is possible to build up upon the previous running examples. If appropriate for the topic of the workshop, the hands-on building blocks from the <i>Hands on first</i> pattern can be gifted to the workshop participants. Sticking to the example of learning basic algorithms, participants could use the building blocks at home to either repeat the topics from the workshop or try to solve new algorithmic problems.',
+		solution: '<i>Gift tangible artifacts for enhanced retention.</i><br>Deliver a tangible artifact to participants at the workshop\'s conclusion. This artifact, whether physical or digital, serves as a continuous reminder of key lessons, encouraging individuals to enhance their newly acquired skills. It ideally doubles as a tool to retrace developed solutions. This highlights the importance of its practical relevance beyond mere play. Small objects are particularly effective in this context, because they can be taken anywhere to bring the reminder into different environments.<br>To further emphasize the artifacts\' purpose beyond mere mementos, it is crucial that these items are directly linked to the workshop\'s core content, providing a tangible means for participants to revisit and practice the learned material. This approach transforms the artifact from a simple keepsake into a functional component of the learning experience, extending its educational impact well beyond the workshop setting.<br>For applying this solution, it is possible to build up upon the previous running examples. If appropriate for the topic of the workshop, the hands-on building blocks from the <i>Hands on first</i> pattern can be gifted to the workshop participants. Sticking to the example of learning basic algorithms, participants could use the building blocks at home to either repeat the topics from the workshop or try to solve new algorithmic problems.',
 		consequences: {
 			benefits: [
 				'<ul><li>Continuous reminders of key concepts fortify participants\' ability to retain coding knowledge post-workshop through <strong>repetition</strong>. As individuals are reminded of key concepts, they are prompted to repeatedly engage with and review the material.</li>',
@@ -329,6 +334,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'abstract-guided-instruction',
 		title: 'Abstract Guided Instruction Through Storytelling',
+		description: 'Bieten Sie ein hohes Maß an Abstraktion bei minimaler Interaktion, indem Sie Metaphern im Rahmen des Storytelling verwenden.',
 		teaserImg: '/images/agi.png',
 		context: 'Learners are engaging with programming for the first time and have no prior experience. It is essential to introduce and explain various coding concepts to establish a foundation for programming.',
 		problem: 'Learning coding concepts without any prior experience poses a significant entry barrier, as it requires a completely new way of thinking<sup>[15]</sup>. The success in programming depends on several predictors such as algorithmic thinking, logical reasoning, and mathematical skills, none of which can be assumed as given.',
@@ -419,6 +425,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'block-based-programming',
 		title: 'Block-Based Programming',
+		description: 'Bieten Sie interaktive Lernlösungen mit geringem Abstraktionsgrad unter Verwendung der blockbasierten Programmierung.',
 		teaserImg: '/images/bbp.png',
 		context: 'Learners understand the basic concepts behind programming and algorithmic thinking at a high level of abstraction. They want to expand their knowledge and learn how to write syntactically correct code in order to create a working program.',
 		problem: 'There is a considerable discrepancy between understanding algorithmic processes and the ability to code from scratch. This discrepancy can be described as a difference in the levels of abstraction. Algorithmic thinking requires the learner to think about abstract concepts at a high level because its goal is to build a repeatable process. Writing text-based code with syntax requires the learner not only to apply algorithmic thinking (a new way of thinking for them), but also to translate it into syntax with which they may not be entirely familiar. These two points in the process of learning to code leave open a gap that has not been fully organized. There are no steps between these two points that help visualize the structure of the code or resemble syntax at a level of low abstraction. Writing code can be seen as a process that provides low- to medium-interaction, using common editors and syntax. This prevents learners from experimenting with the code and feeling free to change things and explore different solutions.',
@@ -502,6 +509,7 @@ export const patterns: Pattern[] = [
 	{
 		id: 'self-contained-kit',
 		title: 'Self-contained Kit',
+		description: 'Es sollte ein Kit verwendet werden, das alle erforderlichen Komponenten enthält.',
 		teaserImg: '/images/sck.png',
 		context: 'Learners, particularly beginners, aim to learn programming using games or kits. This learning takes place either at home in a playful and spontaneous setting or in learning environments such as schools, with educators preparing materials for lessons. Both settings may have limited access to additional resources.',
 		problem: 'For coding kits or games to be fully functional, additional crafting materials, electronic parts, and connectors are required. This leads to learners not being able to use the materials or incurring additional acquisition effort.',

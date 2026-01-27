@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { Separator } from '$lib/components/ui/separator';
-	import { Button } from '$lib/components/ui/button';
+	import { Badge } from '$lib/components/ui/badge';
 	import * as Card from '$lib/components/ui/card';
 	import { base } from '$app/paths';
 	import {
@@ -10,178 +9,190 @@
 		Users,
 		Clock,
 		Code,
-		Puzzle,
 		BookOpen,
-		Tag,
-		type Icon
+		Tag
 	} from 'lucide-svelte';
 
 	export let data: PageData;
 
-	type MetadataProps = {
-		icon: typeof Icon; // Typisierung für Lucide Svelte Komponenten
-		title: string;
-		value: string;
-	};
-
-	function MetadataItem({ icon: Icon, title, value }: MetadataProps) {
-		return (
-			`<div class="flex flex-col space-y-1">
-        <div class="flex items-center text-gray-500 dark:text-gray-400">
-          <svelte:component this={Icon} class="h-4 w-4 mr-2" />
-          <span class="font-medium">${title}</span>
-        </div>
-        <p class="font-semibold text-gray-900 dark:text-gray-100">${value}</p>
-      </div>`
-		);
-	}
-
 	function formatComplexity(level: number): string {
-		switch (level) {
-			case 1: return 'Einfach';
-			case 2: return 'Mittel';
-			case 3: return 'Schwer';
-			default: return 'Unbekannt';
-		}
-	}
-
-	function formatDuration(min: number, max: number): string {
-		if (min === max) return `${min} Min`;
-		return `${min} – ${max} Min`;
+		const labels = ['Einfach', 'Mittel', 'Schwer'];
+		return labels[level - 1] || 'Unbekannt';
 	}
 </script>
 
 <svelte:head>
-	<title>{data.project && data.project.name ? data.project.name + ' | Projektdetails' : 'Projekt'}</title>
+	<title>{data.project?.name ? `${data.project.name} | Details` : 'Projekt'}</title>
 </svelte:head>
 
 {#if data.project}
 	{@const project = data.project}
 
-	<main class="mx-auto max-w-4xl p-4 py-8 md:p-6 md:py-12 space-y-8">
+	<main class="mx-auto max-w-6xl p-6 py-12 space-y-12">
 
-		<div class="mb-4">
-			<a href="{base}/projects" class="text-blue-600 hover:text-blue-800 flex items-center transition-colors">
+		<div class="space-y-6">
+			<a href="{base}/projects"
+				 class="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
 				<ArrowLeft class="mr-2 h-4 w-4" />
-				Zurück zur Projektübersicht
+				Zurück zur Übersicht
 			</a>
-		</div>
 
-		<div>
-			<h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-50 mb-2">
-				{project.name}
-			</h1>
-			<p class="text-lg text-gray-600 dark:text-gray-400">
-				{project.description}
-			</p>
-		</div>
-
-		<Separator />
-
-		<section>
-			<h2 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
-				Eckdaten
-			</h2>
-
-			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-sm">
-
-				<div class="flex flex-col space-y-1">
-					<div class="flex items-center text-gray-500 dark:text-gray-400">
-						<svelte:component this={Puzzle} class="h-4 w-4 mr-2" />
-						<span class="font-medium">Typ</span>
-					</div>
-					<p class="font-semibold text-gray-900 dark:text-gray-100">{project.type}</p>
+			<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+				<div class="space-y-2">
+					<Badge variant="outline" class="uppercase tracking-wider px-3">{project.type}</Badge>
+					<h1 class="text-4xl font-bold tracking-tight lg:text-5xl">
+						{project.name}
+					</h1>
+					<p class="text-xl text-muted-foreground max-w-2xl">
+						{project.description}
+					</p>
 				</div>
-
-				<div class="flex flex-col space-y-1">
-					<div class="flex items-center text-gray-500 dark:text-gray-400">
-						<svelte:component this={Ruler} class="h-4 w-4 mr-2" />
-						<span class="font-medium">Produkt</span>
-					</div>
-					<p class="font-semibold text-gray-900 dark:text-gray-100">{project.product}</p>
-				</div>
-
-				<div class="flex flex-col space-y-1">
-					<div class="flex items-center text-gray-500 dark:text-gray-400">
-						<svelte:component this={Code} class="h-4 w-4 mr-2" />
-						<span class="font-medium">Komplexität</span>
-					</div>
-					<p class="font-semibold text-gray-900 dark:text-gray-100">{formatComplexity(project.complexity)}</p>
-				</div>
-
-				<div class="flex flex-col space-y-1">
-					<div class="flex items-center text-gray-500 dark:text-gray-400">
-						<svelte:component this={Clock} class="h-4 w-4 mr-2" />
-						<span class="font-medium">Dauer</span>
-					</div>
-					<p class="font-semibold text-gray-900 dark:text-gray-100">{formatDuration(project.minDuration, project.maxDuration)}</p>
-				</div>
-
-				<div class="flex flex-col space-y-1">
-					<div class="flex items-center text-gray-500 dark:text-gray-400">
-						<svelte:component this={Users} class="h-4 w-4 mr-2" />
-						<span class="font-medium">Gruppe</span>
-					</div>
-					<p class="font-semibold text-gray-900 dark:text-gray-100">{project.minGroup} – {project.maxGroup} Pers.</p>
-				</div>
-
 			</div>
-		</section>
+		</div>
 
-		<Separator />
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-xl border bg-card text-card-foreground shadow-sm">
+			<div class="flex items-center space-x-3">
+				<div class="p-2 bg-primary/10 rounded-lg text-primary">
+					<Ruler class="h-5 w-5" />
+				</div>
+				<div>
+					<p class="text-xs text-muted-foreground uppercase font-semibold">Produkt</p>
+					<p class="font-medium">{project.product}</p>
+				</div>
+			</div>
+			<div class="flex items-center space-x-3">
+				<div class="p-2 bg-primary/10 rounded-lg text-primary"><Code class="h-5 w-5" /></div>
+				<div>
+					<p class="text-xs text-muted-foreground uppercase font-semibold">Level</p>
+					<p class="font-medium">{formatComplexity(project.complexity)}</p>
+				</div>
+			</div>
+			<div class="flex items-center space-x-3">
+				<div class="p-2 bg-primary/10 rounded-lg text-primary">
+					<Clock class="h-5 w-5" />
+				</div>
+				<div>
+					<p class="text-xs text-muted-foreground uppercase font-semibold">Dauer</p>
+					<p class="font-medium">{project.minDuration}–{project.maxDuration} Min</p>
+				</div>
+			</div>
+			<div class="flex items-center space-x-3">
+				<div class="p-2 bg-primary/10 rounded-lg text-primary">
+					<Users class="h-5 w-5" />
+				</div>
+				<div>
+					<p class="text-xs text-muted-foreground uppercase font-semibold">Gruppe</p>
+					<p class="font-medium">{project.minGroup}–{project.maxGroup} Pers.</p>
+				</div>
+			</div>
+		</div>
 
-		<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+		<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-			<div class="lg:col-span-2 space-y-6">
+			<div class="lg:col-span-8 space-y-10">
 				<section>
-					<h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">Ablauf und Inhalt</h2>
-					<div class="space-y-4 text-base text-gray-700 dark:text-gray-300">
+					<h2 class="text-xl font-semibold pb-5 text-foreground">
+						Ablauf & Inhalt
+					</h2>
+					<div class="space-y-2">
 						{#each project.content as paragraph, i}
-							<div class="flex items-start space-x-3 p-3 rounded-lg border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950 transition-colors">
-								<span class="mt-0.5 flex-shrink-0 text-md font-bold text-blue-600 dark:text-blue-400">{i + 1}.</span>
-								<p class="text-gray-700 dark:text-gray-300 leading-relaxed">{paragraph}</p>
+							<div class="group flex gap-4 py-4 border-b border-muted/50 last:border-none">
+        <span class="text-lg font-bold tabular-nums text-foreground/70 min-w-[1.5rem]">
+          {i + 1}.
+        </span>
+								<p class="text-lg leading-relaxed text-muted-foreground group-hover:text-foreground transition-colors">
+									{paragraph}
+								</p>
 							</div>
 						{/each}
 					</div>
 				</section>
+
+				<section class="space-y-2">
+					<h2 class="text-xl font-semibold pb-5 text-foreground">Materialien & Ressourcen</h2>
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+						{#if project.files}
+							{#each project.files as file}
+								<a
+									href={file.url}
+									class="flex items-center p-3 rounded-lg border bg-card hover:bg-accent hover:text-accent-foreground transition-all group"
+								>
+									<div class="h-9 w-9 rounded bg-primary/10 flex items-center justify-center mr-3 text-primary">
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+												 stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+														d="C4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+										</svg>
+									</div>
+									<div class="flex flex-col">
+										<span class="text-sm font-medium">{file.name}</span>
+										<span class="text-xs text-muted-foreground font-normal">{file.type} • {file.size}</span>
+									</div>
+								</a>
+							{/each}
+						{/if}
+
+						{#if project.links}
+							{#each project.links as link}
+								<a
+									href={link.url}
+									target="_blank"
+									class="flex items-center p-3 rounded-lg border bg-card hover:bg-accent hover:text-accent-foreground transition-all group"
+								>
+									<div class="h-9 w-9 rounded bg-secondary flex items-center justify-center mr-3 text-muted-foreground">
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+												 stroke="currentColor">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+														d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+										</svg>
+									</div>
+									<div class="flex flex-col">
+										<span class="text-sm font-medium">{link.label}</span>
+										<span class="text-xs text-muted-foreground font-normal">{link.platform}</span>
+									</div>
+								</a>
+							{/each}
+						{/if}
+					</div>
+				</section>
 			</div>
 
-			<div class="lg:col-span-1 space-y-8">
-
-				<Card.Root>
+			<aside class="lg:col-span-4 space-y-6">
+				<Card.Root class="overflow-hidden border-none shadow-md">
 					<Card.Header>
-						<h3 class="text-xl font-semibold flex items-center text-gray-800 dark:text-gray-200">
-							<BookOpen class="mr-2 h-5 w-5 text-purple-500" />
-							Benötigte Materialien
-						</h3>
+						<Card.Title class="text-lg flex items-center">
+							<BookOpen class="mr-2 h-5 w-5 text-primary" />
+							Materialien
+						</Card.Title>
 					</Card.Header>
 					<Card.Content>
-						<ul class="list-disc list-inside space-y-2 text-base text-gray-700 dark:text-gray-300 pl-4">
+						<ul class="space-y-3">
 							{#each project.materials as material}
-								<li>{material}</li>
+								<li class="flex items-start text-base text-muted-foreground">
+									• {material}
+								</li>
 							{/each}
 						</ul>
 					</Card.Content>
 				</Card.Root>
 
-				<Card.Root>
+				<Card.Root class="border-none shadow-md">
 					<Card.Header>
-						<h3 class="text-xl font-semibold flex items-center text-gray-800 dark:text-gray-200">
-							<Tag class="mr-2 h-5 w-5 text-green-500" />
-							Verfügbare Sprachen
-						</h3>
+						<Card.Title class="text-lg flex items-center">
+							<Tag class="mr-2 h-5 w-5" />
+							Sprachen
+						</Card.Title>
 					</Card.Header>
 					<Card.Content>
 						<div class="flex flex-wrap gap-2">
 							{#each project.language.slice().sort() as lang}
-                                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200">
-                                    {lang}
-                                </span>
+								<Badge variant="secondary">{lang}</Badge>
 							{/each}
 						</div>
 					</Card.Content>
 				</Card.Root>
-			</div>
+			</aside>
+
 		</div>
 	</main>
 {/if}

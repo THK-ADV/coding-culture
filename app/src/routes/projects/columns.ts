@@ -14,6 +14,21 @@ export type Project = {
 	maxGroup: number;
 	type: string;
 	materials: string[];
+	files: File[];
+	links: Link[];
+}
+
+type File = {
+	name: string;
+	type: string;
+	size: string;
+	url: string;
+}
+
+type Link = {
+	label: string;
+	platform: string;
+	url: string;
 }
 
 export const columns: ColumnDef<Project>[] = [

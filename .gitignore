@@ -1,3 +1,5 @@
+.idea/
+.svelte-kit/
 test-results
 node_modules
 

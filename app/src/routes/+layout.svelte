@@ -3,6 +3,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { page } from '$app/stores';
 	import { base } from '$app/paths';
+	import { Home } from 'lucide-svelte';
 
 	const navLinks = [
 		{ href: `${base}/projects`, label: 'Projekte' },
@@ -21,7 +22,12 @@
 	<header class="sticky top-0 z-10 w-full bg-white shadow-sm">
 		<nav aria-label="Hauptnavigation" class="border-b border-gray-200 bg-white">
 			<div class="container mx-auto max-w-6xl px-4">
-				<ul class="-mb-px flex space-x-2 overflow-x-auto whitespace-nowrap md:overflow-visible">
+				<ul class="-mb-px flex space-x-2 overflow-x-auto whitespace-nowrap md:overflow-visible items-stretch">
+					<li class="flex shrink-0 items-center pr-4">
+						<a href="{base}/" class="hover:opacity-80 transition-opacity flex items-center text-gray-600">
+							<Home class="h-5 w-5" />
+						</a>
+					</li>
 					{#each navLinks as link (link.href)}
 						{@const isActive =
 							link.href === `${base}/about`

@@ -133,7 +133,7 @@
 </script>
 
 <div class="min-h-screen bg-slate-50 py-12 dark:bg-slate-950">
-	<main class="container mx-auto max-w-5xl px-4">
+	<main class="container mx-auto px-4">
 
 		<div class="mb-10">
 			<h1 class="text-4xl font-bold tracking-tight mb-3">
@@ -159,7 +159,7 @@
 				{#each definitions as def}
 					<Card.Root class="border-t-4 border-t-transparent hover:shadow-lg transition-all" style="border-top-color: currentColor;">
 						<Card.Header class="{def.bg} rounded-t-lg pb-4">
-							<div class="mb-2 flex items-center justify-between">
+							<div class="mt-2 mb-2 flex items-center justify-between">
 								<def.icon class="h-6 w-6 {def.color}" />
 								<Badge variant="outline" class="bg-white/50 backdrop-blur">{def.question}</Badge>
 							</div>
@@ -184,8 +184,6 @@
 					Der normative Kompass für zeitgemäßen Informatikunterricht.
 				</p>
 			</div>
-
-
 
 			<div class="grid gap-6 md:grid-cols-2">
 				{#each principles as prin}
@@ -275,7 +273,3 @@
 
 	</main>
 </div>
-
-<style>
-    /* Zusätzliche globale Styles falls nötig, meistens reicht Tailwind */
-</style>

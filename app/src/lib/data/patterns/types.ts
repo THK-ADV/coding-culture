@@ -29,6 +29,7 @@ export interface KnownUses {
 export interface Pattern {
 	id: string;
 	title: string;
+	description: string;
 	teaserImg?: string;
 	context: string;
 	problem: string;

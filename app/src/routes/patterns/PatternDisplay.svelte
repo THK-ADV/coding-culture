@@ -2,11 +2,11 @@
 
 	import {
 		Target,
-		AlertTriangle,
+		TriangleAlert,
 		Zap,
 		Lightbulb,
-		CheckCircle,
-		XCircle,
+		CircleCheckBig,
+		CircleX,
 		BookOpen,
 		Link,
 		FileCode
@@ -48,7 +48,7 @@
 	<Card.Root>
 		<Card.Header>
 			<Card.Title class="flex items-center text-xl">
-				<AlertTriangle class="mr-2 h-5 w-5 text-red-500" />
+				<TriangleAlert class="mr-2 h-5 w-5 text-red-500" />
 				Problem
 			</Card.Title>
 		</Card.Header>
@@ -98,7 +98,7 @@
 			<Card.Root class="border-green-300 bg-green-50/50">
 				<Card.Header>
 					<Card.Title class="flex items-center text-xl text-green-800">
-						<CheckCircle class="mr-2 h-5 w-5" />
+						<CircleCheckBig class="mr-2 h-5 w-5" />
 						Benefits
 					</Card.Title>
 				</Card.Header>
@@ -106,7 +106,7 @@
 					<ul class="flex flex-col gap-3">
 						{#each pattern.consequences.benefits as benefit}
 							<li class="flex items-start">
-								<CheckCircle class="{listIconClass} text-green-600" />
+								<CircleCheckBig class="{listIconClass} text-green-600" />
 								<span class="text-muted-foreground">{@html benefit}</span>
 							</li>
 						{/each}
@@ -117,7 +117,7 @@
 			<Card.Root class="border-red-300 bg-red-50/50">
 				<Card.Header>
 					<Card.Title class="flex items-center text-xl text-red-800">
-						<XCircle class="mr-2 h-5 w-5" />
+						<CircleX class="mr-2 h-5 w-5" />
 						Liabilities
 					</Card.Title>
 				</Card.Header>
@@ -125,7 +125,7 @@
 					<ul class="flex flex-col gap-3">
 						{#each pattern.consequences.liabilities as liability}
 							<li class="flex items-start">
-								<XCircle class="{listIconClass} text-red-600" />
+								<CircleX class="{listIconClass} text-red-600" />
 								<span class="text-muted-foreground">{@html liability}</span>
 							</li>
 						{/each}
