@@ -12,48 +12,63 @@
 			name: 'Standard-Präsentation (16:9)',
 			category: 'Präsentationen',
 			type: 'PPTX',
-			fileUrl: ''
+			fileUrl: '/templates/standard-presentation.pptx'
 		},
 		{
 			id: 2,
 			name: 'Projekt-Evaluationsbogen',
 			category: 'Evaluationen',
 			type: 'DOCX',
-			fileUrl: ''
+			fileUrl: '/templates/evaluations.docx'
 		},
 		{
 			id: 3,
-			name: 'Meilenstein-Projektbewertung',
-			category: 'Projektbewertungen',
+			name: 'Projektanleitung',
+			category: 'Anleitungen',
 			type: 'DOCX',
-			fileUrl: ''
+			fileUrl: '/templates/instructions.docx'
 		},
 		{
 			id: 4,
-			name: 'Workshop-Anleitung',
-			category: 'Anleitungen',
+			name: 'Projektkarte Anfänger',
+			category: 'Karten',
 			type: 'DOCX',
-			fileUrl: ''
+			fileUrl: '/templates/card-beginner.docx'
 		},
 		{
 			id: 5,
-			name: 'Feedback-Karten (Druckvorlage)',
+			name: 'Projektkarte Fortgeschritten',
 			category: 'Karten',
-			type: 'PPTX',
-			fileUrl: ''
+			type: 'DOCX',
+			fileUrl: '/templates/card-advanced.docx'
 		},
 		{
 			id: 6,
-			name: 'Abschlusspräsentation-Vorlage',
-			category: 'Präsentationen',
-			type: 'PPTX',
-			fileUrl: ''
+			name: 'Projektkarte Profi',
+			category: 'Karten',
+			type: 'DOCX',
+			fileUrl: '/templates/card-professional.docx'
+		},
+		{
+			id: 7,
+			name: 'Projektkarte Übergreifend',
+			category: 'Karten',
+			type: 'DOCX',
+			fileUrl: '/templates/card-general.docx'
+		},
+		{
+			id: 8,
+			name: 'Bildersammlung',
+			category: 'Assets',
+			type: 'ZIP',
+			fileUrl: '/templates/assets.zip'
 		}
 	];
 
 	function getBadgeVariant(type) {
 		if (type === 'PPTX') return 'default';
 		if (type === 'DOCX') return 'secondary';
+		if (type === 'ZIP') return 'success';
 		return 'outline';
 	}
 </script>
@@ -92,7 +107,7 @@
 							</Badge>
 						</Table.Cell>
 						<Table.Cell class="text-right">
-							<a href="{base}{template.fileUrl}" download>
+							<a href={template.fileUrl} download>
 								<Button variant="outline" size="sm">
 									<Download class="h-4 w-4 mr-2" />
 									Herunterladen
