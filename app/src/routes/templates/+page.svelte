@@ -12,7 +12,7 @@
 			name: 'Standard-Präsentation (16:9)',
 			category: 'Präsentationen',
 			type: 'PPTX',
-			fileUrl: '/standard-presentation.pptx'
+			fileUrl: '/templates/standard-presentation.pptx'
 		},
 		{
 			id: 2,
