@@ -12,7 +12,7 @@
 			name: 'Standard-Präsentation (16:9)',
 			category: 'Präsentationen',
 			type: 'PPTX',
-			fileUrl: '/templates/standard-presentation.pptx'
+			fileUrl: '/standard-presentation.pptx'
 		},
 		{
 			id: 2,
@@ -107,7 +107,7 @@
 							</Badge>
 						</Table.Cell>
 						<Table.Cell class="text-right">
-							<a href={template.fileUrl} download>
+							<a href="{base}{template.fileUrl}" download>
 								<Button variant="outline" size="sm">
 									<Download class="h-4 w-4 mr-2" />
 									Herunterladen
