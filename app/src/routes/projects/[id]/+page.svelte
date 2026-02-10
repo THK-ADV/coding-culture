@@ -10,8 +10,9 @@
 		Clock,
 		Code,
 		BookOpen,
-		Tag
+		Tag, Download
 	} from 'lucide-svelte';
+	import {Button} from "$lib/components/ui/button";
 
 	export let data: PageData;
 
@@ -114,7 +115,7 @@
 						{#if project.files}
 							{#each project.files as file}
 								<a
-									href={file.url}
+									href="{base}{file.url}" download
 									class="flex items-center p-3 rounded-lg border bg-card hover:bg-accent hover:text-accent-foreground transition-all group"
 								>
 									<div class="h-9 w-9 rounded bg-primary/10 flex items-center justify-center mr-3 text-primary">

@@ -19,5 +19,20 @@
 		"Computer",
 		"Schere",
 		"Papier"
+	],
+	"files": [
+		{
+			"name": "Anleitung.pdf",
+			"type": "application/pdf",
+			"size": "1.2MB",
+			"url": "/data/anleitung.pdf"
+		}
+	],
+	"links": [
+		{
+			"label": "GitHub Repo",
+			"platform": "GitHub",
+			"url": "https://github.com/user/project"
+		}
 	]
 }

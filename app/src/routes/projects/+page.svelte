@@ -15,6 +15,9 @@
 	import { Button } from '$lib/components/ui/button';
 	import { Input } from '$lib/components/ui/input';
 	import { base } from '$app/paths';
+	import * as Select from '$lib/components/ui/select';
+	import { Badge } from "$lib/components/ui/badge";
+	import { Search, ChevronLeft, ChevronRight, ArrowUp, ArrowDown, ArrowUpDown } from 'lucide-svelte';
 
 	export let data: PageData;
 
@@ -25,6 +28,12 @@
 	let minComplexity = 1;
 	let maxDuration: number | null = null;
 	let maxGroupSize: number | null = null;
+
+	function getSortIcon(isSorted: string | boolean) {
+		if (isSorted === 'asc') return ArrowUp;
+		if (isSorted === 'desc') return ArrowDown;
+		return ArrowUpDown;
+	}
 
 	$: [
 		searchTerm,
@@ -103,7 +112,7 @@
 	}
 </script>
 
-<div class="space-y-6">
+<!--div class="space-y-6">
 	<h1 class="text-3xl font-bold text-gray-900">Projektübersicht</h1>
 
 	{#if data?.uniqueLanguages && data?.uniqueTypes}
@@ -226,7 +235,7 @@
 				</div>
 			</div>
 		</div>
-		<!--div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-gray-50 dark:bg-gray-900 border rounded-lg shadow-sm">
+		<!!!div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-gray-50 dark:bg-gray-900 border rounded-lg shadow-sm">
 			<div>
 				<label for="search" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
 					Suchen
@@ -271,7 +280,7 @@
 					{/each}
 				</select>
 			</div>
-		</div-->
+		</div!!!>
 	{/if}
 
 	<div class="bg-white rounded-md border">
@@ -363,6 +372,175 @@
 			>
 				Weiter
 			</button>
+		</div>
+	</div>
+</div-->
+
+<div class="space-y-8 pb-20">
+	<div class="flex flex-col gap-1">
+		<h1 class="text-3xl font-bold tracking-tight text-foreground">Projektübersicht</h1>
+		<p class="text-muted-foreground">Entdecke und filtere alle verfügbaren Projekte.</p>
+	</div>
+
+	<div class="flex flex-col gap-4">
+		<div class="flex flex-wrap items-center gap-2">
+			<div class="relative w-full max-w-sm">
+				<Search class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+				<Input
+					placeholder="Suchen..."
+					bind:value={searchTerm}
+					class="pl-9 h-9 bg-muted/40 border-none focus-visible:ring-1 focus-visible:ring-ring"
+				/>
+			</div>
+
+			<div class="flex flex-wrap gap-2">
+				<select bind:value={selectedLanguage} class="h-9 rounded-md border bg-transparent px-3 py-1 text-sm focus:ring-1">
+					<option value="all">Sprache</option>
+					{#each data.uniqueLanguages as lang}<option value={lang}>{lang}</option>{/each}
+				</select>
+
+				<select bind:value={selectedType} class="h-9 rounded-md border bg-transparent px-3 py-1 text-sm focus:ring-1">
+					<option value="all">Typ</option>
+					{#each data.uniqueTypes as type}<option value={type}>{type}</option>{/each}
+				</select>
+
+				<select bind:value={minComplexity} class="h-9 rounded-md border bg-transparent px-3 py-1 text-sm focus:ring-1">
+					<option value={1}>Komplexität (Alle)</option>
+					<option value={2}>Mittel+</option>
+					<option value={3}>Schwer</option>
+				</select>
+			</div>
+
+			<Button variant="ghost" size="sm" class="text-muted-foreground ml-auto" on:click={() => {
+        searchTerm = ''; selectedLanguage = 'all'; selectedType = 'all'; // Reset
+      }}>
+				Reset
+			</Button>
+		</div>
+
+		<div class="flex flex-wrap gap-3 items-center text-sm text-muted-foreground bg-muted/20 p-2 rounded-lg border border-dashed">
+			<div class="flex items-center gap-2">
+				<span class="text-xs font-semibold uppercase opacity-60">Dauer bis:</span>
+				<Input type="number" bind:value={maxDuration} placeholder="Min" class="w-20 h-7 text-xs" />
+			</div>
+			<div class="flex items-center gap-2 border-l pl-3">
+				<span class="text-xs font-semibold uppercase opacity-60">Gruppe bis:</span>
+				<Input type="number" bind:value={maxGroupSize} placeholder="Pers." class="w-20 h-7 text-xs" />
+			</div>
+		</div>
+	</div>
+
+	<div class="rounded-xl border border-muted bg-card shadow-sm overflow-hidden">
+		<Table.Root>
+			<Table.Header class="bg-muted/30">
+				{#each table.getHeaderGroups() as headerGroup}
+					<Table.Row class="hover:bg-transparent border-none">
+						{#each headerGroup.headers as header}
+							<Table.Head class="h-10 px-4">
+								{#if !header.isPlaceholder}
+									<button
+										class="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground group w-full"
+										on:click={header.column.getToggleSortingHandler()}
+									>
+										{#if typeof header.column.columnDef.header === 'string'}
+											{header.column.columnDef.header}
+										{:else}
+											<svelte:component this={header.column.columnDef.header} />
+										{/if}
+
+										<div class="transition-opacity {header.column.getIsSorted() ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}">
+											{#if header.column.getIsSorted() === 'asc'}
+												<ArrowUp class="h-3 w-3" />
+											{:else if header.column.getIsSorted() === 'desc'}
+												<ArrowDown class="h-3 w-3" />
+											{:else}
+												<ArrowUpDown class="h-3 w-3" />
+											{/if}
+										</div>
+									</button>
+								{/if}
+							</Table.Head>
+						{/each}
+					</Table.Row>
+				{/each}
+			</Table.Header>
+			<Table.Body>
+				{#if filteredProjects.length}
+					{#each table.getRowModel().rows as row (row.id)}
+						{@const project = row.original}
+						<Table.Row class="hover:bg-muted/50 transition-colors">
+							<Table.Cell>
+								<div class="flex flex-col">
+									<a href="{base}/projects/{project.id}" class="font-semibold text-primary hover:underline underline-offset-4 decoration-primary/30">
+										{project.name}
+									</a>
+									<span class="text-xs text-muted-foreground line-clamp-1 mt-0.5">
+                    {project.description}
+                  </span>
+								</div>
+							</Table.Cell>
+							<Table.Cell>
+								<Badge variant="outline" class="font-normal border-muted-foreground/20">{project.type}</Badge>
+							</Table.Cell>
+							<Table.Cell>
+								<div class="flex flex-wrap gap-1">
+									{#each project.language.slice(0, 2) as lang}
+										<Badge variant="secondary" class="text-[10px] px-1.5 py-0 font-medium bg-blue-50 text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+											{lang}
+										</Badge>
+									{/each}
+									{#if project.language.length > 2}
+										<span class="text-[10px] text-muted-foreground">+{project.language.length - 2}</span>
+									{/if}
+								</div>
+							</Table.Cell>
+							<Table.Cell>
+								<span class="text-sm">{formatComplexity(project.complexity)}</span>
+							</Table.Cell>
+							<Table.Cell class="text-right tabular-nums text-muted-foreground">
+								{project.minDuration}-{project.maxDuration}m
+							</Table.Cell>
+						</Table.Row>
+					{/each}
+				{:else}
+					<Table.Row>
+						<Table.Cell colspan="5" class="h-32 text-center text-muted-foreground">
+							Keine Projekte gefunden.
+						</Table.Cell>
+					</Table.Row>
+				{/if}
+			</Table.Body>
+		</Table.Root>
+	</div>
+
+	<div class="flex items-center justify-between border-t pt-4">
+		<p class="text-xs text-muted-foreground">
+			<span class="font-medium text-foreground">{filteredProjects.length}</span> Ergebnisse
+		</p>
+		<div class="flex items-center gap-4">
+      <span class="text-xs text-muted-foreground">
+        Seite {$pagination.pageIndex + 1} von {table.getPageCount()}
+      </span>
+			<div class="flex gap-1">
+				<Button
+					variant="outline"
+					size="icon"
+					class="h-8 w-8"
+					disabled={!table.getCanPreviousPage()}
+					on:click={() => table.previousPage()}
+				>
+					<ChevronLeft class="h-4 w-4" />
+				</Button>
+				<Button
+					variant="outline"
+					size="icon"
+					class="h-8 w-8"
+					disabled={!table.getCanNextPage()}
+					on:click={() => table.nextPage()}
+				>
+					<ChevronRight class="h-4 w-4" />
+				</Button>
+			</div>
 		</div>
 	</div>
 </div>
