@@ -93,7 +93,7 @@ Wir freuen uns über Beiträge! Da dieses Projekt als Open Educational Resource 
 
 ### Neue Projekte hinzufügen
 Du hast eine tolle Projektidee für den Unterricht? Füge sie zur App hinzu, ohne Programmieren zu müssen!
-1.  Öffne die Datei `app/static/data/projects/template.json`.
+1.  Öffne die Datei `app/static/data/template.json`.
 2.  Erstelle einen neuen Eintrag basierend auf dem Schema.
 3.  Erstelle einen **Pull Request**.
 
