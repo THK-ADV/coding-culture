@@ -6,7 +6,7 @@
 	"content": [
 		"Keyword 1",
 		"Keyword 2",
-		"Keword 3"
+		"Keyword 3"
 	],
 	"complexity": 1,
 	"language": ["Python"],
@@ -22,17 +22,23 @@
 	],
 	"files": [
 		{
-			"name": "Anleitung.pdf",
-			"type": "application/pdf",
-			"size": "1.2MB",
-			"url": "/data/anleitung.pdf"
+			"name": "Projektanleitung",
+			"type": "PDF",
+			"size": "607KB",
+			"url": "/materials/anleitung.pdf"
+		},
+		{
+			"name": "Projektkarte",
+			"type": "PDF",
+			"size": "49KB",
+			"url": "/materials/karte.pdf"
 		}
 	],
 	"links": [
 		{
-			"label": "GitHub Repo",
+			"label": "Ressourcen",
 			"platform": "GitHub",
-			"url": "https://github.com/user/project"
+			"url": "https://github.com"
 		}
 	]
 }

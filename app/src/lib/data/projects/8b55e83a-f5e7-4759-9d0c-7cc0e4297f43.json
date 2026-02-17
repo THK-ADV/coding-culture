@@ -1,7 +1,7 @@
 {
   "id": "8b55e83a-f5e7-4759-9d0c-7cc0e4297f43",
   "name": "Hot Potato... of Doom!",
-  "description": "Beschreibung",
+  "description": "",
   "product": "LittleBits",
   "content": [
     "if else",
@@ -29,5 +29,32 @@
     "Papier",
     "Stifte",
     "Schere"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "607KB",
+      "url": "/materials/Projektanleitung-Heiße Kartoffel.pdf"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "49KB",
+      "url": "/materials/Projektkarte_HotPotato.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "27KB",
+      "url": "/materials/Projektkarte_LittleBits_Uebergreifend.pdf"
+    }
+  ],
+  "links": [
+    {
+      "label": "Ressourcen",
+      "platform": "LittleBits",
+      "url": "https://classroom.littlebits.com/lessons/invention-2-hot-potato-of-doom"
+    }
   ]
 }

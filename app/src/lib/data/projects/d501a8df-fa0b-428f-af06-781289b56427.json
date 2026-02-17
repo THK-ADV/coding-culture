@@ -1,7 +1,7 @@
 {
   "id": "d501a8df-fa0b-428f-af06-781289b56427",
   "name": "Gedächtnisspiel",
-  "description": "Beschreibung",
+  "description": "",
   "product": "lego spike prime",
   "content": [
     "if else",
@@ -18,7 +18,27 @@
   "maxGroup": 3,
   "type": "IoT",
   "materials": [
-    "Lego Spike Prime Baukastn",
+    "Lego Spike Prime Baukasten",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "836KB",
+      "url": "/materials/Projektanleitung-Gedächtnisspiel.pdf"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "63KB",
+      "url": "/materials/Projektkarte_Gedächtnisspiel.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "23KB",
+      "url": "/materials/Projektkarte_LegoSpikePrime_Uebergreifend.pdf"
+    }
   ]
 }

@@ -1,0 +1,76 @@
+{
+  "id": "f0419b7f-a07e-49a2-9459-4191e85e0872",
+  "name": "Labyrinth",
+  "description": "",
+  "product": "micro:bit",
+  "content": [
+    "if else",
+    "Funktionen",
+    "Sensoren",
+    "Boolean",
+    "computational thinking",
+    "Variablen"
+  ],
+  "complexity": 3,
+  "language": [
+    "Block-based",
+    "JavaScript",
+    "Python"
+  ],
+  "minDuration": 150,
+  "maxDuration": 300,
+  "minGroup": 2,
+  "maxGroup": 4,
+  "type": "IoT",
+  "materials": [
+    "micro:bit",
+    "Klebeband",
+    "Maqueen Erweiterung",
+    "Schere",
+    "Pappe"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "1.1MB",
+      "url": "/materials/Projektanleitung-MicroBit_Maqueen.pdf"
+    },
+    {
+      "name": "Cheatsheet",
+      "type": "PDF",
+      "size": "323KB",
+      "url": "/materials/cheatsheet_maqueen.pdf"
+    },
+    {
+      "name": "Ablaufplan farbig",
+      "type": "PDF",
+      "size": "154KB",
+      "url": "/materials/ablaufplan-farbe.pdf"
+    },
+    {
+      "name": "Ablaufplan schwarz weiß",
+      "type": "PDF",
+      "size": "142KB",
+      "url": "/materials/ablaufplan-bw.pdf"
+    },
+    {
+      "name": "Hilfestellung Blocksammlung",
+      "type": "PDF",
+      "size": "194KB",
+      "url": "/materials/blöcke_hilfe.pdf"
+    },
+    {
+      "name": "Code",
+      "type": "HEX",
+      "size": "1.3MB",
+      "url": "/materials/labyrinth-final.hex"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "49KB",
+      "url": "/materials/Projektkarte_Maqueen.pdf"
+    }
+  ]
+}

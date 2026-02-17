@@ -1,7 +1,7 @@
 {
   "id": "ed4622b4-f27d-4b1e-a81a-8f143ee07f5e",
   "name": "Schranke",
-  "description": "Beschreibung",
+  "description": "",
   "product": "fischertechnik",
   "content": [
     "if else",
@@ -22,5 +22,49 @@
     "fischertechnik Baukasten",
     "calliope",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "1.9MB",
+      "url": "/materials/Projektanleitung-Schranke.pdf"
+    },
+    {
+      "name": "Projektanleitung übergreifend",
+      "type": "PDF",
+      "size": "1.5MB",
+      "url": "/materials/Projektanleitung-Fischertechnik.pdf"
+    },
+    {
+      "name": "Bauanleitung",
+      "type": "PDF",
+      "size": "6.2MB",
+      "url": "/materials/Bauanleitung_Ampel_Trockner_Schranke.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "1.5MB",
+      "url": "/materials/MakeCode_FischerTechnik_Schranke.pdf"
+    },
+    {
+      "name": "Code",
+      "type": "HEX",
+      "size": "908KB",
+      "url": "/materials/mini-Fischertechnik_Schranke.hex"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "49KB",
+      "url": "/materials/Projektkarte_Schranke_ft.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "29KB",
+      "url": "/materials/Projektkarte_fischertechnik_Uebergreifend.pdf"
+    }
   ]
 }

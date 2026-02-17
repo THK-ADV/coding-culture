@@ -1,7 +1,7 @@
 {
   "id": "81262213-a7c2-45c1-b885-18785f175d45",
   "name": "Reaktionsspiel",
-  "description": "Beschreibung",
+  "description": "",
   "product": "Calliope Mini",
   "content": [
     "if else",
@@ -24,5 +24,19 @@
   "materials": [
     "calliope",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "783KB",
+      "url": "/materials/Projektanleitung-Reaktionsspiel_Calliope.pdf"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "63KB",
+      "url": "/materials/Projektkarte_Reaktionsspiel_Calliope.pdf"
+    }
   ]
 }

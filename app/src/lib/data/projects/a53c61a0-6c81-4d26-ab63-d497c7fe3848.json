@@ -1,7 +1,7 @@
 {
   "id": "a53c61a0-6c81-4d26-ab63-d497c7fe3848",
   "name": "Alarmanlage",
-  "description": "Beschreibung",
+  "description": "",
   "product": "fischertechnik",
   "content": [
     "if else",
@@ -23,5 +23,49 @@
     "fischertechnik Baukasten",
     "calliope",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "1.3MB",
+      "url": "/materials/Projektanleitung-Alarmanlage.pdf"
+    },
+    {
+      "name": "Projektanleitung übergreifend",
+      "type": "PDF",
+      "size": "1.5MB",
+      "url": "/materials/Projektanleitung-Fischertechnik.pdf"
+    },
+    {
+      "name": "Bauanleitung",
+      "type": "PDF",
+      "size": "5.7MB",
+      "url": "/materials/Bauanleitung_Alarm_Ventilator_Wasserwaage.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "1.6MB",
+      "url": "/materials/MakeCode_FischerTechnik_Alarm.pdf"
+    },
+    {
+      "name": "Code",
+      "type": "HEX",
+      "size": "915KB",
+      "url": "/materials/mini-Fischertechnik_Alarmanlage.hex"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "48KB",
+      "url": "/materials/Projektkarte_Alarmanlage.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "29KB",
+      "url": "/materials/Projektkarte_fischertechnik_Uebergreifend.pdf"
+    }
   ]
 }

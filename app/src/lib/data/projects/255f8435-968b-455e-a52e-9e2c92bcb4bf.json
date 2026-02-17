@@ -1,7 +1,7 @@
 {
   "id": "255f8435-968b-455e-a52e-9e2c92bcb4bf",
   "name": "Feuchtigkeitssensor",
-  "description": "Beschreibung",
+  "description": "",
   "product": "Boson Inventor Kit",
   "content": [
     "if else",
@@ -24,5 +24,25 @@
     "Expansion Board",
     "calliope oder micro:bit",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "8.7MB",
+      "url": "/materials/Boson Kit Anleitung.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "15.9MB",
+      "url": "/materials/Boson Project Cards Nepo.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "29KB",
+      "url": "/materials/Projektkarte_Boson_Uebergreifend.pdf"
+    }
   ]
 }

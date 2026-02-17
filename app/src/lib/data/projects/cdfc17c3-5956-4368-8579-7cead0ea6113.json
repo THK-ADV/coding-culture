@@ -1,7 +1,7 @@
 {
   "id": "cdfc17c3-5956-4368-8579-7cead0ea6113",
   "name": "Automatische Tür",
-  "description": "Beschreibung",
+  "description": "",
   "product": "Boson Inventor Kit",
   "content": [
     "if else"
@@ -27,5 +27,43 @@
     "Schere",
     "Stifte",
     "Klebeband"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "558KB",
+      "url": "/materials/Boson Automatische Tür.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "8.7MB",
+      "url": "/materials/Boson Kit Anleitung.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "15.9MB",
+      "url": "/materials/Boson Project Cards Nepo.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "1.4MB",
+      "url": "/data/ProjectCards.pdf"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "68KB",
+      "url": "/materials/Projektkarte_AutomatischeTür.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "29KB",
+      "url": "/materials/Projektkarte_Boson_Uebergreifend.pdf"
+    }
   ]
 }

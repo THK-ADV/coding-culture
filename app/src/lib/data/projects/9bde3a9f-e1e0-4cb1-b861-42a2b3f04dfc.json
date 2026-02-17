@@ -1,7 +1,7 @@
 {
   "id": "9bde3a9f-e1e0-4cb1-b861-42a2b3f04dfc",
   "name": "Ventilator",
-  "description": "Beschreibung",
+  "description": "",
   "product": "Boson Inventor Kit",
   "content": [
     "if else"
@@ -23,5 +23,31 @@
     "Expansion Board",
     "calliope oder micro:bit",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "8.7MB",
+      "url": "/materials/Boson Kit Anleitung.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "15.9MB",
+      "url": "/materials/Boson Project Cards Nepo.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "1.4MB",
+      "url": "/data/ProjectCards.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "29KB",
+      "url": "/materials/Projektkarte_Boson_Uebergreifend.pdf"
+    }
   ]
 }

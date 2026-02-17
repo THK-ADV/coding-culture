@@ -1,7 +1,7 @@
 {
   "id": "9f7c1ce5-58c1-42a2-b37c-29736a6d13ec",
   "name": "Rockstar Guitar",
-  "description": "Beschreibung",
+  "description": "",
   "product": "LittleBits",
   "content": [
     "if else",
@@ -32,5 +32,32 @@
     "Papier",
     "Stifte",
     "Schere"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "699KB",
+      "url": "/materials/Projektanleitung-Guitar.pdf"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "49KB",
+      "url": "/materials/Projektkarte_Instrumente.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "27KB",
+      "url": "/materials/Projektkarte_LittleBits_Uebergreifend.pdf"
+    }
+  ],
+  "links": [
+    {
+      "label": "Ressourcen",
+      "platform": "LittleBits",
+      "url": "https://classroom.littlebits.com/lessons/invention-3-rockstar-guitar"
+    }
   ]
 }

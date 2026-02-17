@@ -1,7 +1,7 @@
 {
   "id": "0b1830ac-00a4-4871-ba4b-c5927b90895a",
-  "name": "Pocket Pin",
-  "description": "Beschreibung",
+  "name": "Digital Pocket Pet",
+  "description": "",
   "product": "Boson Inventor Kit",
   "content": [
     "if else",
@@ -25,5 +25,20 @@
     "Expansion Board",
     "calliope oder micro:bit",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "1.4MB",
+      "url": "/data/ProjectCards.pdf"
+    }
+  ],
+  "links": [
+    {
+      "label": "Wiki",
+      "platform": "DFRobot",
+      "url": "https://wiki.dfrobot.com/_SKU_TOY0083_BOSON_Inventor_Kit"
+    }
   ]
 }

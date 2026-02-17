@@ -1,7 +1,7 @@
 {
   "id": "40b4f04b-be7f-4174-b006-a037d7c2d327",
   "name": "Tamagotchi",
-  "description": "Beschreibung",
+  "description": "",
   "product": "-",
   "content": [
     "Variablen",
@@ -21,5 +21,31 @@
   "type": "Konsolenprogrammierung",
   "materials": [
     "PC mit Code Editor und Python Compiler"
+  ],
+  "files": [
+    {
+      "name": "Foliensatz",
+      "type": "ZIP",
+      "size": "2.7MB",
+      "url": "/materials/Foliensatz.zip"
+    },
+    {
+      "name": "Handouts",
+      "type": "ZIP",
+      "size": "4MB",
+      "url": "/materials/Handouts.zip"
+    },
+    {
+      "name": "Code",
+      "type": "ZIP",
+      "size": "6KB",
+      "url": "/materials/Code.zip"
+    },
+    {
+      "name": "Quiz",
+      "type": "PDF",
+      "size": "75KB",
+      "url": "/materials/quiz.pdf"
+    }
   ]
 }

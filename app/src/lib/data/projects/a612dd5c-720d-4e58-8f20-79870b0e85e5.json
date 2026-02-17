@@ -1,7 +1,7 @@
 {
   "id": "a612dd5c-720d-4e58-8f20-79870b0e85e5",
   "name": "Heiße Kartoffel",
-  "description": "Beschreibung",
+  "description": "",
   "product": "micro:bit",
   "content": [
     "if else",
@@ -22,5 +22,25 @@
   "materials": [
     "micro:bit",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "317KB",
+      "url": "/materials/Projektanleitung_MicroBit_Heiße_Kartoffel_Spiel.pdf"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "48KB",
+      "url": "/materials/Projektkarte_MicrobitHeisseKartoffel.pdf"
+    },
+    {
+      "name": "Code",
+      "type": "HEX",
+      "size": "1.4MB",
+      "url": "/materials/Code-microbit-hot-potato-game.hex"
+    }
   ]
 }

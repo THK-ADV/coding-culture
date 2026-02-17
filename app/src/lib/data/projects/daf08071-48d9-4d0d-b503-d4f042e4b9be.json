@@ -1,7 +1,7 @@
 {
   "id": "daf08071-48d9-4d0d-b503-d4f042e4b9be",
   "name": "Safe + Erweiterung",
-  "description": "Beschreibung",
+  "description": "",
   "product": "lego spike prime",
   "content": [
     "if else",
@@ -19,7 +19,39 @@
   "maxGroup": 3,
   "type": "IoT",
   "materials": [
-    "Lego Spike Prime Baukastn",
+    "Lego Spike Prime Baukasten",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "740KB",
+      "url": "/materials/Projektanleitung-Safe.pdf"
+    },
+    {
+      "name": "Projektanleitung Erweiterung",
+      "type": "PDF",
+      "size": "747KB",
+      "url": "/materials/Projektanleitung-Safe-Erweiterung.pdf"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "61KB",
+      "url": "/materials/Projektkarte_Safe.pdf"
+    },
+    {
+      "name": "Projektkarte Erweiterung",
+      "type": "PDF",
+      "size": "62KB",
+      "url": "/materials/Projektkarte_SafeErweiterung.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "23KB",
+      "url": "/materials/Projektkarte_LegoSpikePrime_Uebergreifend.pdf"
+    }
   ]
 }

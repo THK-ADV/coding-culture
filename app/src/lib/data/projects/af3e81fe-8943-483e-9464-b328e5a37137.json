@@ -1,7 +1,7 @@
 {
   "id": "af3e81fe-8943-483e-9464-b328e5a37137",
   "name": "Würfel",
-  "description": "Beschreibung",
+  "description": "",
   "product": "micro:bit",
   "content": [
     "if else",
@@ -22,5 +22,13 @@
   "materials": [
     "micro:bit",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "904KB",
+      "url": "/materials/Projektanleitung-MicroBit_Würfel.pdf"
+    }
   ]
 }

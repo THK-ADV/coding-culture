@@ -1,7 +1,7 @@
 {
   "id": "6dca00a3-ac8c-4102-89d8-bfb9131f1ffc",
   "name": "Catch Game",
-  "description": "Beschreibung",
+  "description": "",
   "product": "-",
   "content": [
     "computational thinking",
@@ -17,5 +17,13 @@
   "type": "Scratch Game",
   "materials": [
     "PC mit Internet"
+  ],
+  "files": [
+    {
+      "name": "Code",
+      "type": "SB3",
+      "size": "234KB",
+      "url": "/materials/catch-game.sb3"
+    }
   ]
 }

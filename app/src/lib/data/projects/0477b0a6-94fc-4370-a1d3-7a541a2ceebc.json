@@ -1,7 +1,7 @@
 {
   "id": "0477b0a6-94fc-4370-a1d3-7a541a2ceebc",
   "name": "Eierlauf",
-  "description": "Beschreibung",
+  "description": "",
   "product": "Calliope Mini",
   "content": [
     "if else",
@@ -31,5 +31,19 @@
     "Cutter",
     "Schere",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "438KB",
+      "url": "/materials/Projektanleitung-Eierlauf.pdf"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "49KB",
+      "url": "/materials/Projektkarte_Eierlauf.pdf"
+    }
   ]
 }

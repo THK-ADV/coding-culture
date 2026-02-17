@@ -1,7 +1,7 @@
 {
   "id": "95fbb70e-a45a-446b-ba54-6462e0b5a85f",
   "name": "Adventure",
-  "description": "Beschreibung",
+  "description": "",
   "product": "-",
   "content": [
     "Loops",
@@ -19,5 +19,25 @@
   "type": "Scratch Game",
   "materials": [
     "PC mit Internet"
+  ],
+  "files": [
+    {
+      "name": "Anleitung",
+      "type": "PDF",
+      "size": "141KB",
+      "url": "/materials/Scratch_Anleitung.pdf"
+    },
+    {
+      "name": "Code Basis",
+      "type": "SB3",
+      "size": "38KB",
+      "url": "/materials/Base_Game.sb3"
+    },
+    {
+      "name": "Code mit Erweiterungen",
+      "type": "SB3",
+      "size": "551KB",
+      "url": "/materials/MitAllenErweiterungen.sb3"
+    }
   ]
 }

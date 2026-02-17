@@ -1,7 +1,7 @@
 {
   "id": "f0f5f2d0-34d9-45b8-93f3-6cda428ab230",
   "name": "Raumschiff-Story",
-  "description": "Beschreibung",
+  "description": "",
   "product": "-",
   "content": [
     "Sequenzen",
@@ -28,17 +28,10 @@
   ],
   "files": [
     {
-      "name": "Anleitung.pdf",
-      "type": "application/pdf",
-      "size": "1.2MB",
-      "url": "/data/anleitung.pdf"
-    }
-  ],
-  "links": [
-    {
-      "label": "GitHub Repo",
-      "platform": "GitHub",
-      "url": "https://github.com/user/project"
+      "name": "Materialien",
+      "type": "ZIP",
+      "size": "8.9MB",
+      "url": "/materials/Coding Koffer.zip"
     }
   ]
 }

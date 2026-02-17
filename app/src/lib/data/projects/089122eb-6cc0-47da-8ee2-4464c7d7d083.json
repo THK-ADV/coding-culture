@@ -1,7 +1,7 @@
 {
   "id": "089122eb-6cc0-47da-8ee2-4464c7d7d083",
   "name": "Bewegungsspiel",
-  "description": "Beschreibung",
+  "description": "",
   "product": "Calliope Mini",
   "content": [
     "if else",
@@ -30,5 +30,31 @@
     "3 - 7 Tischtennisbälle",
     "2 Krokodilklemmen",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "936KB",
+      "url": "/materials/Projektanleitung-Bewegungsspiel.pdf"
+    },
+    {
+      "name": "Code Spieler",
+      "type": "HEX",
+      "size": "705KB",
+      "url": "/materials/Code_Bewegungsspiel_Spieler.hex"
+    },
+    {
+      "name": "Code Spielleitung",
+      "type": "HEX",
+      "size": "928KB",
+      "url": "/materials/Code_Bewegungsspiel_Spielleitung.hex"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "49KB",
+      "url": "/materials/Projektkarte_Bewegungsspiel.pdf"
+    }
   ]
 }

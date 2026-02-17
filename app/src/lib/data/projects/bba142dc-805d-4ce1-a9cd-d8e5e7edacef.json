@@ -1,7 +1,7 @@
 {
   "id": "bba142dc-805d-4ce1-a9cd-d8e5e7edacef",
   "name": "Drehzahlsteuerung",
-  "description": "Beschreibung",
+  "description": "",
   "product": "Boson Inventor Kit",
   "content": [
     "if else",
@@ -25,5 +25,19 @@
     "Expansion Board",
     "calliope oder micro:bit",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "8.7MB",
+      "url": "/materials/Boson Kit Anleitung.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "29KB",
+      "url": "/materials/Projektkarte_Boson_Uebergreifend.pdf"
+    }
   ]
 }

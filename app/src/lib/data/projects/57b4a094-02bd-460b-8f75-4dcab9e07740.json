@@ -1,7 +1,7 @@
 {
   "id": "57b4a094-02bd-460b-8f75-4dcab9e07740",
   "name": "Jump Game",
-  "description": "Beschreibung",
+  "description": "",
   "product": "-",
   "content": [
     "Loops",
@@ -17,5 +17,19 @@
   "type": "Scratch Game",
   "materials": [
     "PC mit Internet"
+  ],
+  "files": [
+    {
+      "name": "Cheatsheet",
+      "type": "PDF",
+      "size": "773KB",
+      "url": "/materials/Scratch_Cheatsheet.pdf"
+    },
+    {
+      "name": "Code",
+      "type": "SB3",
+      "size": "426KB",
+      "url": "/materials/jump-game.sb3"
+    }
   ]
 }

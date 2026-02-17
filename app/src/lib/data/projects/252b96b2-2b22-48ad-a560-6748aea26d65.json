@@ -1,7 +1,7 @@
 {
   "id": "252b96b2-2b22-48ad-a560-6748aea26d65",
   "name": "Ventilator",
-  "description": "Beschreibung",
+  "description": "",
   "product": "fischertechnik",
   "content": [
     "if else",
@@ -22,5 +22,49 @@
     "fischertechnik Baukasten",
     "calliope",
     "PC"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "1.5MB",
+      "url": "/materials/Projektanleitung-Ventilator.pdf"
+    },
+    {
+      "name": "Projektanleitung übergreifend",
+      "type": "PDF",
+      "size": "1.5MB",
+      "url": "/materials/Projektanleitung-Fischertechnik.pdf"
+    },
+    {
+      "name": "Bauanleitung",
+      "type": "PDF",
+      "size": "5.7MB",
+      "url": "/materials/Bauanleitung_Alarm_Ventilator_Wasserwaage.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "647KB",
+      "url": "/materials/MakeCode_FischerTechnik_Ventilator.pdf"
+    },
+    {
+      "name": "Code",
+      "type": "HEX",
+      "size": "907KB",
+      "url": "/materials/mini-Fischertechnik_Ventilator.hex"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "49KB",
+      "url": "/materials/Projektkarte_Ventilator.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "29KB",
+      "url": "/materials/Projektkarte_fischertechnik_Uebergreifend.pdf"
+    }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "f62d582c-ecf2-490e-9a5e-73058ec8c4ee",
   "name": "Tug of War",
-  "description": "Beschreibung",
+  "description": "",
   "product": "LittleBits",
   "content": [
     "if else",
@@ -31,5 +31,32 @@
     "Papier",
     "Stifte",
     "Schere"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "574KB",
+      "url": "/materials/Projektanleitung-Tug of War.pdf"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "49KB",
+      "url": "/materials/Projektkarte_Tauziehen.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "27KB",
+      "url": "/materials/Projektkarte_LittleBits_Uebergreifend.pdf"
+    }
+  ],
+  "links": [
+    {
+      "label": "Ressourcen",
+      "platform": "LittleBits",
+      "url": "https://classroom.littlebits.com/lessons/invention-4-tug-of-war"
+    }
   ]
 }

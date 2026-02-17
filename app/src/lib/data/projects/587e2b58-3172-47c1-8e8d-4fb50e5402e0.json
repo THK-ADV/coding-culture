@@ -1,7 +1,7 @@
 {
   "id": "587e2b58-3172-47c1-8e8d-4fb50e5402e0",
-  "name": "Schrank",
-  "description": "Beschreibung",
+  "name": "Schranke",
+  "description": "",
   "product": "Boson Inventor Kit",
   "content": [
     "Variablen",
@@ -26,5 +26,37 @@
     "PC",
     "Strohhalm",
     "Klebeband"
+  ],
+  "files": [
+    {
+      "name": "Projektanleitung",
+      "type": "PDF",
+      "size": "568KB",
+      "url": "/materials/Boson Schranke.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "8.7MB",
+      "url": "/materials/Boson Kit Anleitung.pdf"
+    },
+    {
+      "name": "Anleitung extern",
+      "type": "PDF",
+      "size": "15.9MB",
+      "url": "/materials/Boson Project Cards Nepo.pdf"
+    },
+    {
+      "name": "Projektkarte",
+      "type": "PDF",
+      "size": "64KB",
+      "url": "/materials/Projektkarte_Schranke.pdf"
+    },
+    {
+      "name": "Projektkarte übergreifend",
+      "type": "PDF",
+      "size": "29KB",
+      "url": "/materials/Projektkarte_Boson_Uebergreifend.pdf"
+    }
   ]
 }
