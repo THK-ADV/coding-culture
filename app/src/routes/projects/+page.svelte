@@ -15,16 +15,20 @@
 	import { Input } from '$lib/components/ui/input';
 	import { base } from '$app/paths';
 	import { Badge } from "$lib/components/ui/badge";
-	import { Search, ChevronLeft, ChevronRight, ArrowUp, ArrowDown, ArrowUpDown } from 'lucide-svelte';
+	import { Search, ChevronLeft, ChevronRight, ArrowUp, ArrowDown, ArrowUpDown, X } from 'lucide-svelte';
 
 	export let data: PageData;
 
 	let searchTerm = '';
+	let debouncedSearchTerm = '';
+	let searchTimeout: ReturnType<typeof setTimeout> | null = null;
 	let selectedLanguage = 'all';
 	let selectedType = 'all';
 	let selectedProduct = 'all';
 	let minComplexity = 1;
+	let minDuration: number | null = null;
 	let maxDuration: number | null = null;
+	let minGroupSize: number | null = null;
 	let maxGroupSize: number | null = null;
 	const sorting = writable<SortingState>([]);
 	const pagination = writable<PaginationState>({
@@ -32,27 +36,37 @@
 		pageSize: 25
 	});
 
-	$: if (searchTerm || selectedLanguage || selectedType || selectedProduct || minComplexity || maxDuration || maxGroupSize) {
+	// Debounce search term
+	$: {
+		if (searchTimeout) clearTimeout(searchTimeout);
+		searchTimeout = setTimeout(() => {
+			debouncedSearchTerm = searchTerm;
+		}, 300);
+	}
+
+	$: if (debouncedSearchTerm || selectedLanguage || selectedType || selectedProduct || minComplexity || minDuration || maxDuration || minGroupSize || maxGroupSize) {
 		pagination.update(p => ({ ...p, pageIndex: 0 }));
 	}
 
 	$: filteredProjects = data?.projects?.filter(project => {
 		const searchMatch =
-			!searchTerm ||
-			project.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			project.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			project.language?.some(l => l.toLowerCase().includes(searchTerm.toLowerCase())) ||
-			project.product?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			project.content?.some(c => c.toLowerCase().includes(searchTerm.toLowerCase())) ||
-			project.type?.toLowerCase().includes(searchTerm.toLowerCase());
+			!debouncedSearchTerm ||
+			project.name?.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+			project.description?.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+			project.language?.some(l => l.toLowerCase().includes(debouncedSearchTerm.toLowerCase())) ||
+			project.product?.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) ||
+			project.content?.some(c => c.toLowerCase().includes(debouncedSearchTerm.toLowerCase())) ||
+			project.type?.toLowerCase().includes(debouncedSearchTerm.toLowerCase());
 
 		const langMatch = selectedLanguage === 'all' || project.language.includes(selectedLanguage);
 		const typeMatch = selectedType === 'all' || project.type === selectedType;
 		const productMatch = selectedProduct === 'all' || project.product === selectedProduct;
 
 		const complexityMatch = project.complexity >= minComplexity;
-		const durationMatch = maxDuration === null || project.minDuration <= maxDuration;
-		const groupMatch = maxGroupSize === null || project.minGroup <= maxGroupSize;
+		const durationMinMatch = minDuration === null || project.maxDuration >= minDuration;
+		const durationMaxMatch = maxDuration === null || project.minDuration <= maxDuration;
+		const groupMinMatch = minGroupSize === null || project.maxGroup >= minGroupSize;
+		const groupMaxMatch = maxGroupSize === null || project.minGroup <= maxGroupSize;
 
 		return (
 			searchMatch &&
@@ -60,10 +74,25 @@
 			typeMatch &&
 			productMatch &&
 			complexityMatch &&
-			durationMatch &&
-			groupMatch
+			durationMinMatch &&
+			durationMaxMatch &&
+			groupMinMatch &&
+			groupMaxMatch
 		);
 	}) || [];
+
+	// Count active filters (excluding defaults)
+	$: activeFilterCount = [
+		debouncedSearchTerm !== '',
+		selectedLanguage !== 'all',
+		selectedType !== 'all',
+		selectedProduct !== 'all',
+		minComplexity > 1,
+		minDuration !== null,
+		maxDuration !== null,
+		minGroupSize !== null,
+		maxGroupSize !== null
+	].filter(Boolean).length;
 
 	$: table = createSvelteTable({
 		data: filteredProjects,
@@ -101,12 +130,29 @@
 
 	function resetFilters() {
 		searchTerm = '';
+		debouncedSearchTerm = '';
 		selectedLanguage = 'all';
 		selectedType = 'all';
 		selectedProduct = 'all';
 		minComplexity = 1;
+		minDuration = null;
 		maxDuration = null;
+		minGroupSize = null;
 		maxGroupSize = null;
+	}
+
+	function removeFilter(filterName: string) {
+		switch(filterName) {
+			case 'search': searchTerm = ''; debouncedSearchTerm = ''; break;
+			case 'language': selectedLanguage = 'all'; break;
+			case 'type': selectedType = 'all'; break;
+			case 'product': selectedProduct = 'all'; break;
+			case 'complexity': minComplexity = 1; break;
+			case 'minDuration': minDuration = null; break;
+			case 'maxDuration': maxDuration = null; break;
+			case 'minGroupSize': minGroupSize = null; break;
+			case 'maxGroupSize': maxGroupSize = null; break;
+		}
 	}
 </script>
 
@@ -118,7 +164,7 @@
 
 	<div class="flex flex-col gap-4">
 		<div class="flex flex-wrap items-center gap-2">
-			<div class="relative w-full max-w-sm">
+			<div class="relative flex-1 min-w-[280px]">
 				<Search class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
 				<Input
 					placeholder="Suchen..."
@@ -126,39 +172,48 @@
 					class="pl-9 h-9 bg-muted/40 border-none focus-visible:ring-1 focus-visible:ring-ring"
 				/>
 			</div>
-
-			<div class="flex flex-wrap gap-2">
-				<select bind:value={selectedLanguage} class="h-9 rounded-md border bg-transparent px-3 py-1 text-sm focus:ring-1">
-					<option value="all">Sprache</option>
-					{#each data.uniqueLanguages as lang}<option value={lang}>{lang}</option>{/each}
-				</select>
-
-				<select bind:value={selectedType} class="h-9 rounded-md border bg-transparent px-3 py-1 text-sm focus:ring-1">
-					<option value="all">Typ</option>
-					{#each data.uniqueTypes as type}<option value={type}>{type}</option>{/each}
-				</select>
-
-				<select bind:value={minComplexity} class="h-9 rounded-md border bg-transparent px-3 py-1 text-sm focus:ring-1">
-					<option value={1}>Komplexität (Alle)</option>
-					<option value={2}>Mittel+</option>
-					<option value={3}>Schwer</option>
-				</select>
-			</div>
-			<Button variant="ghost" size="sm" class="text-muted-foreground ml-auto">
+			<Button variant="ghost" size="sm" class="text-muted-foreground">
 				<button on:click={resetFilters}>
-					Reset
+					Reset {#if activeFilterCount > 0}({activeFilterCount}){/if}
 				</button>
 			</Button>
 		</div>
 
+		<div class="flex flex-wrap gap-2">
+			<select bind:value={selectedLanguage} class="h-9 rounded-md border bg-transparent px-3 py-1 text-sm focus:ring-1">
+				<option value="all">Sprache (Alle)</option>
+				{#each data.uniqueLanguages as lang}<option value={lang}>{lang}</option>{/each}
+			</select>
+
+			<select bind:value={selectedType} class="h-9 rounded-md border bg-transparent px-3 py-1 text-sm focus:ring-1">
+				<option value="all">Typ (Alle)</option>
+				{#each data.uniqueTypes as type}<option value={type}>{type}</option>{/each}
+			</select>
+
+			<select bind:value={selectedProduct} class="h-9 rounded-md border bg-transparent px-3 py-1 text-sm focus:ring-1">
+				<option value="all">Produkt (Alle)</option>
+				{#each data.uniqueProducts as product}<option value={product}>{product}</option>{/each}
+			</select>
+
+			<select bind:value={minComplexity} class="h-9 rounded-md border bg-transparent px-3 py-1 text-sm focus:ring-1">
+				<option value={1}>Komplexität (Alle)</option>
+				<option value={2}>Mittel+</option>
+				<option value={3}>Schwer</option>
+			</select>
+		</div>
+
 		<div class="flex flex-wrap gap-3 items-center text-sm text-muted-foreground bg-muted/20 p-2 rounded-lg border border-dashed">
 			<div class="flex items-center gap-2">
-				<span class="text-xs font-semibold uppercase opacity-60">Dauer bis:</span>
-				<Input type="number" bind:value={maxDuration} placeholder="Min" class="w-20 h-7 text-xs" />
+				<span class="text-xs font-semibold uppercase opacity-60">Dauer (Min):</span>
+				<Input type="number" bind:value={minDuration} placeholder="Von" min="0" class="w-20 h-7 text-xs" />
+				<span class="text-xs opacity-40">–</span>
+				<Input type="number" bind:value={maxDuration} placeholder="Bis" min="0" class="w-20 h-7 text-xs" />
 			</div>
 			<div class="flex items-center gap-2 border-l pl-3">
-				<span class="text-xs font-semibold uppercase opacity-60">Gruppe bis:</span>
-				<Input type="number" bind:value={maxGroupSize} placeholder="Pers." class="w-20 h-7 text-xs" />
+				<span class="text-xs font-semibold uppercase opacity-60">Gruppengröße:</span>
+				<Input type="number" bind:value={minGroupSize} placeholder="Von" min="0" class="w-20 h-7 text-xs" />
+				<span class="text-xs opacity-40">–</span>
+				<Input type="number" bind:value={maxGroupSize} placeholder="Bis" min="0" class="w-20 h-7 text-xs" />
 			</div>
 		</div>
 	</div>
@@ -177,8 +232,8 @@
 									>
 										{#if typeof header.column.columnDef.header === 'string'}
 											{header.column.columnDef.header}
-										{:else}
-											<svelte:component this={header.column.columnDef.header} />
+										{:else if typeof header.column.columnDef.header === 'function'}
+											{header.column.columnDef.header(header.getContext())}
 										{/if}
 
 										<div class="transition-opacity {header.column.getIsSorted() ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}">
@@ -237,7 +292,7 @@
 					{/each}
 				{:else}
 					<Table.Row>
-						<Table.Cell colspan="5" class="h-32 text-center text-muted-foreground">
+						<Table.Cell colspan={5} class="h-32 text-center text-muted-foreground">
 							Keine Projekte gefunden.
 						</Table.Cell>
 					</Table.Row>
@@ -248,7 +303,11 @@
 
 	<div class="flex items-center justify-between border-t pt-4">
 		<p class="text-xs text-muted-foreground">
-			<span class="font-medium text-foreground">{filteredProjects.length}</span> Ergebnisse
+			{#if activeFilterCount > 0}
+				<span class="font-medium text-foreground">{filteredProjects.length}</span> von <span class="font-medium">{data.projects.length}</span> Projekten
+			{:else}
+				<span class="font-medium text-foreground">{filteredProjects.length}</span> Projekte
+			{/if}
 		</p>
 		<div class="flex items-center gap-4">
       <span class="text-xs text-muted-foreground">
