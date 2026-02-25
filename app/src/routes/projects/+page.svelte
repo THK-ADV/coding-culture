@@ -140,20 +140,6 @@
 		minGroupSize = null;
 		maxGroupSize = null;
 	}
-
-	function removeFilter(filterName: string) {
-		switch(filterName) {
-			case 'search': searchTerm = ''; debouncedSearchTerm = ''; break;
-			case 'language': selectedLanguage = 'all'; break;
-			case 'type': selectedType = 'all'; break;
-			case 'product': selectedProduct = 'all'; break;
-			case 'complexity': minComplexity = 1; break;
-			case 'minDuration': minDuration = null; break;
-			case 'maxDuration': maxDuration = null; break;
-			case 'minGroupSize': minGroupSize = null; break;
-			case 'maxGroupSize': maxGroupSize = null; break;
-		}
-	}
 </script>
 
 <div class="space-y-8 pb-20">
